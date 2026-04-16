@@ -1,0 +1,4539 @@
+[
+  {
+    "id": "ts001",
+    "topicCluster": "training_science",
+    "title": "VDOT Framework",
+    "description": "Jack Daniels' VDOT system quantifies aerobic fitness as the V\u0307O\u2082max that produces a given race performance. Used to set training paces across all intensity zones.",
+    "tags": [
+      "vdot",
+      "vo2max",
+      "training_paces",
+      "jack_daniels"
+    ],
+    "edges": [
+      {
+        "targetId": "ts002",
+        "weight": 0.88
+      },
+      {
+        "targetId": "ts003",
+        "weight": 0.83
+      }
+    ],
+    "positionX": 0.0,
+    "positionY": 6.5,
+    "positionZ": 0.0,
+    "color": "#4A90D9"
+  },
+  {
+    "id": "ts002",
+    "topicCluster": "training_science",
+    "title": "VO2max Development",
+    "description": "VO2max is the maximum rate of oxygen consumption. Interval training at 95\u2013100% of VO2max pace (\u22483\u20135 min efforts) provides the strongest stimulus for improvement.",
+    "tags": [
+      "vo2max",
+      "intervals",
+      "aerobic_capacity"
+    ],
+    "edges": [
+      {
+        "targetId": "ts001",
+        "weight": 0.88
+      },
+      {
+        "targetId": "ts005",
+        "weight": 0.81
+      },
+      {
+        "targetId": "re002",
+        "weight": 0.6
+      }
+    ],
+    "positionX": -0.442,
+    "positionY": 6.375,
+    "positionZ": 0.405,
+    "color": "#4A90D9"
+  },
+  {
+    "id": "ts003",
+    "topicCluster": "training_science",
+    "title": "Lactate Threshold",
+    "description": "The highest intensity sustainable without significant lactate accumulation. Threshold training (20\u201340 min at T-pace) raises this ceiling, directly improving marathon and half-marathon performance.",
+    "tags": [
+      "lactate_threshold",
+      "tempo_running",
+      "t_pace"
+    ],
+    "edges": [
+      {
+        "targetId": "ts001",
+        "weight": 0.83
+      },
+      {
+        "targetId": "ts008",
+        "weight": 0.8
+      },
+      {
+        "targetId": "ri001",
+        "weight": 0.8
+      }
+    ],
+    "positionX": 0.072,
+    "positionY": 6.25,
+    "positionZ": -0.826,
+    "color": "#4A90D9"
+  },
+  {
+    "id": "ts004",
+    "topicCluster": "training_science",
+    "title": "Aerobic Base Building",
+    "description": "Foundation of endurance training. 8\u201316 weeks of high-volume easy running builds mitochondrial density, capillary networks, and fat oxidation capacity before intensity is introduced.",
+    "tags": [
+      "base_building",
+      "easy_runs",
+      "aerobic_base",
+      "mitochondria"
+    ],
+    "edges": [
+      {
+        "targetId": "ts009",
+        "weight": 0.8
+      },
+      {
+        "targetId": "ts001",
+        "weight": 0.79
+      },
+      {
+        "targetId": "cm004",
+        "weight": 0.7
+      }
+    ],
+    "positionX": 0.604,
+    "positionY": 6.125,
+    "positionZ": 0.787,
+    "color": "#4A90D9"
+  },
+  {
+    "id": "ts005",
+    "topicCluster": "training_science",
+    "title": "Periodisation Principles",
+    "description": "Structured training cycles (mesocycles of 3 weeks hard + 1 week recovery) prevent overtraining and allow supercompensation. Macrocycle aligns peak fitness with race day.",
+    "tags": [
+      "periodisation",
+      "mesocycle",
+      "macrocycle",
+      "supercompensation"
+    ],
+    "edges": [
+      {
+        "targetId": "ts002",
+        "weight": 0.81
+      },
+      {
+        "targetId": "ts010",
+        "weight": 0.8
+      }
+    ],
+    "positionX": -1.101,
+    "positionY": 6.0,
+    "positionZ": -0.195,
+    "color": "#4A90D9"
+  },
+  {
+    "id": "ts006",
+    "topicCluster": "training_science",
+    "title": "Training Stress Balance",
+    "description": "Chronic Training Load (CTL) minus Acute Training Load (ATL) equals Form (TSB). Optimal race performance occurs when Form is +5 to +25 after a taper.",
+    "tags": [
+      "ctl",
+      "atl",
+      "tsb",
+      "training_load",
+      "form"
+    ],
+    "edges": [
+      {
+        "targetId": "ts011",
+        "weight": 0.8
+      },
+      {
+        "targetId": "ts003",
+        "weight": 0.79
+      }
+    ],
+    "positionX": 1.028,
+    "positionY": 5.875,
+    "positionZ": -0.654,
+    "color": "#4A90D9"
+  },
+  {
+    "id": "ts007",
+    "topicCluster": "training_science",
+    "title": "Easy Run Prescription",
+    "description": "80% of training volume should be at easy/conversational pace (Z1\u2013Z2). Keeps stress low, allows adaptation, and builds aerobic efficiency without excessive fatigue.",
+    "tags": [
+      "easy_runs",
+      "80_20_rule",
+      "polarised_training",
+      "z2"
+    ],
+    "edges": [
+      {
+        "targetId": "ts012",
+        "weight": 0.8
+      },
+      {
+        "targetId": "ts002",
+        "weight": 0.79
+      }
+    ],
+    "positionX": -0.337,
+    "positionY": 5.75,
+    "positionZ": 1.255,
+    "color": "#4A90D9"
+  },
+  {
+    "id": "ts008",
+    "topicCluster": "training_science",
+    "title": "Interval Training",
+    "description": "Repeated high-intensity efforts with recovery intervals. I-pace intervals (3\u20135 min) target VO2max; R-pace repetitions (under 2 min) develop speed and economy.",
+    "tags": [
+      "intervals",
+      "i_pace",
+      "r_pace",
+      "high_intensity"
+    ],
+    "edges": [
+      {
+        "targetId": "ts003",
+        "weight": 0.8
+      },
+      {
+        "targetId": "ts013",
+        "weight": 0.8
+      }
+    ],
+    "positionX": -0.628,
+    "positionY": 5.625,
+    "positionZ": -1.21,
+    "color": "#4A90D9"
+  },
+  {
+    "id": "ts009",
+    "topicCluster": "training_science",
+    "title": "Long Run Science",
+    "description": "Weekly long run (\u226590 min) builds glycogen storage capacity, fat oxidation, and mental toughness. Progressive overload: no more than 10% weekly distance increase.",
+    "tags": [
+      "long_run",
+      "glycogen",
+      "fat_oxidation",
+      "endurance"
+    ],
+    "edges": [
+      {
+        "targetId": "ts004",
+        "weight": 0.8
+      },
+      {
+        "targetId": "ts014",
+        "weight": 0.79
+      },
+      {
+        "targetId": "nu001",
+        "weight": 0.7
+      }
+    ],
+    "positionX": 1.328,
+    "positionY": 5.5,
+    "positionZ": 0.485,
+    "color": "#4A90D9"
+  },
+  {
+    "id": "ts010",
+    "topicCluster": "training_science",
+    "title": "Marathon-Pace Segments",
+    "description": "Including M-pace (marathon pace) miles in long runs teaches the body and mind to hold race effort while fatigued. Typically last 20\u201340% of a long run.",
+    "tags": [
+      "marathon_pace",
+      "m_pace",
+      "race_specificity",
+      "long_run"
+    ],
+    "edges": [
+      {
+        "targetId": "ts005",
+        "weight": 0.8
+      },
+      {
+        "targetId": "ts015",
+        "weight": 0.79
+      }
+    ],
+    "positionX": -1.342,
+    "positionY": 5.375,
+    "positionZ": 0.554,
+    "color": "#4A90D9"
+  },
+  {
+    "id": "ts011",
+    "topicCluster": "training_science",
+    "title": "Strides",
+    "description": "Short (20\u201330s) accelerations at R-pace with full recovery. Improve running economy, neuromuscular activation, and form without significant aerobic stress. 4\u20136 strides 2\u20133\u00d7/week.",
+    "tags": [
+      "strides",
+      "neuromuscular",
+      "running_economy",
+      "form"
+    ],
+    "edges": [
+      {
+        "targetId": "ts006",
+        "weight": 0.8
+      },
+      {
+        "targetId": "ts016",
+        "weight": 0.79
+      }
+    ],
+    "positionX": 0.627,
+    "positionY": 5.25,
+    "positionZ": -1.34,
+    "color": "#4A90D9"
+  },
+  {
+    "id": "ts012",
+    "topicCluster": "training_science",
+    "title": "Recovery Runs",
+    "description": "Very easy runs (Z1, below 70% max HR) the day after hard workouts. Flush metabolic waste, maintain training volume, and reinforce aerobic adaptation without adding stress.",
+    "tags": [
+      "recovery_runs",
+      "z1",
+      "active_recovery",
+      "flush"
+    ],
+    "edges": [
+      {
+        "targetId": "ts007",
+        "weight": 0.8
+      },
+      {
+        "targetId": "ts017",
+        "weight": 0.79
+      }
+    ],
+    "positionX": 0.447,
+    "positionY": 5.125,
+    "positionZ": 1.426,
+    "color": "#4A90D9"
+  },
+  {
+    "id": "ts013",
+    "topicCluster": "training_science",
+    "title": "Progression Runs",
+    "description": "Runs beginning easy and finishing at M-pace or faster. Build metabolic efficiency and practice pacing discipline. Typically 10\u201316 km.",
+    "tags": [
+      "progression_runs",
+      "negative_split",
+      "pacing",
+      "m_pace"
+    ],
+    "edges": [
+      {
+        "targetId": "ts018",
+        "weight": 0.8
+      },
+      {
+        "targetId": "ts008",
+        "weight": 0.8
+      }
+    ],
+    "positionX": -1.298,
+    "positionY": 5.0,
+    "positionZ": -0.752,
+    "color": "#4A90D9"
+  },
+  {
+    "id": "ts014",
+    "topicCluster": "training_science",
+    "title": "Fartlek Training",
+    "description": "Unstructured speed play: varying pace by feel or terrain. Bridges gap between easy running and structured intervals. Low psychological stress with aerobic/anaerobic benefit.",
+    "tags": [
+      "fartlek",
+      "speed_play",
+      "unstructured",
+      "variety"
+    ],
+    "edges": [
+      {
+        "targetId": "ts019",
+        "weight": 0.8
+      },
+      {
+        "targetId": "ts009",
+        "weight": 0.79
+      }
+    ],
+    "positionX": 1.46,
+    "positionY": 4.875,
+    "positionZ": -0.321,
+    "color": "#4A90D9"
+  },
+  {
+    "id": "ts015",
+    "topicCluster": "training_science",
+    "title": "Cross-Training Equivalence",
+    "description": "Cycling, swimming, elliptical maintain aerobic fitness with lower impact. Cycling effort equivalent: multiply running duration by 1.4. Useful during injury or taper.",
+    "tags": [
+      "cross_training",
+      "cycling",
+      "swimming",
+      "low_impact"
+    ],
+    "edges": [
+      {
+        "targetId": "ts020",
+        "weight": 0.8
+      },
+      {
+        "targetId": "ts010",
+        "weight": 0.79
+      },
+      {
+        "targetId": "ip010",
+        "weight": 0.6
+      }
+    ],
+    "positionX": -0.851,
+    "positionY": 4.75,
+    "positionZ": 1.21,
+    "color": "#4A90D9"
+  },
+  {
+    "id": "ts016",
+    "topicCluster": "training_science",
+    "title": "Heat Acclimatisation",
+    "description": "Running in heat forces plasma volume expansion and improved sweating response. 10\u201314 days of moderate heat exposure adds ~5% plasma volume, benefiting performance in any climate.",
+    "tags": [
+      "heat",
+      "acclimatisation",
+      "plasma_volume",
+      "hydration"
+    ],
+    "edges": [
+      {
+        "targetId": "ts021",
+        "weight": 0.8
+      },
+      {
+        "targetId": "ts011",
+        "weight": 0.79
+      }
+    ],
+    "positionX": -0.187,
+    "positionY": 4.625,
+    "positionZ": -1.44,
+    "color": "#4A90D9"
+  },
+  {
+    "id": "ts017",
+    "topicCluster": "training_science",
+    "title": "Altitude Training",
+    "description": "At altitude (>1500m), reduced O\u2082 partial pressure stimulates EPO production, increasing red blood cell mass. Live high/train low is optimal. Benefits persist 3\u20134 weeks post-descent.",
+    "tags": [
+      "altitude",
+      "epo",
+      "red_blood_cells",
+      "live_high_train_low"
+    ],
+    "edges": [
+      {
+        "targetId": "ts022",
+        "weight": 0.8
+      },
+      {
+        "targetId": "ts012",
+        "weight": 0.79
+      }
+    ],
+    "positionX": 1.081,
+    "positionY": 4.5,
+    "positionZ": 0.911,
+    "color": "#4A90D9"
+  },
+  {
+    "id": "ts018",
+    "topicCluster": "training_science",
+    "title": "Cardiac Drift",
+    "description": "In long runs, HR gradually rises at constant pace (cardiac drift). Normal up to 5\u20137%. Greater drift signals dehydration or excess heat stress. Use pace as primary governor in heat.",
+    "tags": [
+      "cardiac_drift",
+      "hr_monitoring",
+      "heat",
+      "dehydration"
+    ],
+    "edges": [
+      {
+        "targetId": "ts023",
+        "weight": 0.8
+      },
+      {
+        "targetId": "ts013",
+        "weight": 0.8
+      }
+    ],
+    "positionX": -1.362,
+    "positionY": 4.375,
+    "positionZ": 0.056,
+    "color": "#4A90D9"
+  },
+  {
+    "id": "ts019",
+    "topicCluster": "training_science",
+    "title": "Training Zones",
+    "description": "Five-zone model anchored by max HR: Z1 <70%, Z2 70\u201380%, Z3 80\u201387%, Z4 87\u201393%, Z5 >93%. Zone 2 builds aerobic base; zone 4\u20135 drive performance improvements.",
+    "tags": [
+      "training_zones",
+      "heart_rate",
+      "z2",
+      "intensity"
+    ],
+    "edges": [
+      {
+        "targetId": "ts014",
+        "weight": 0.8
+      },
+      {
+        "targetId": "ts024",
+        "weight": 0.79
+      }
+    ],
+    "positionX": 0.921,
+    "positionY": 4.25,
+    "positionZ": -0.916,
+    "color": "#4A90D9"
+  },
+  {
+    "id": "ts020",
+    "topicCluster": "training_science",
+    "title": "Supercompensation",
+    "description": "After training stress + adequate recovery, fitness rises above baseline. Window is 48\u201372h post-hard-session. Timing the next hard workout to this window maximises adaptation.",
+    "tags": [
+      "supercompensation",
+      "adaptation",
+      "recovery",
+      "timing"
+    ],
+    "edges": [
+      {
+        "targetId": "ts015",
+        "weight": 0.8
+      },
+      {
+        "targetId": "ts023",
+        "weight": 0.79
+      }
+    ],
+    "positionX": -0.056,
+    "positionY": 4.125,
+    "positionZ": 1.217,
+    "color": "#4A90D9"
+  },
+  {
+    "id": "ts021",
+    "topicCluster": "training_science",
+    "title": "Tempo Running",
+    "description": "Sustained effort at lactate threshold (roughly 10K race pace for recreational runners). 20\u201340 min continuous or 2\u00d715 min. The single most effective session for marathon pace improvement.",
+    "tags": [
+      "tempo",
+      "threshold",
+      "continuous_tempo",
+      "marathon"
+    ],
+    "edges": [
+      {
+        "targetId": "ts024",
+        "weight": 0.81
+      },
+      {
+        "targetId": "ts016",
+        "weight": 0.8
+      }
+    ],
+    "positionX": -0.716,
+    "positionY": 4.0,
+    "positionZ": -0.858,
+    "color": "#4A90D9"
+  },
+  {
+    "id": "ts022",
+    "topicCluster": "training_science",
+    "title": "VO2max Intervals",
+    "description": "800m\u20131600m repeats at current 3K\u20135K race pace with equal recovery. 5\u20136 reps per session. Elevates VO2max ceiling, improves aerobic power.",
+    "tags": [
+      "vo2max",
+      "800m",
+      "1600m",
+      "intervals",
+      "i_pace"
+    ],
+    "edges": [
+      {
+        "targetId": "ts017",
+        "weight": 0.8
+      },
+      {
+        "targetId": "ts025",
+        "weight": 0.79
+      }
+    ],
+    "positionX": 0.983,
+    "positionY": 3.875,
+    "positionZ": 0.132,
+    "color": "#4A90D9"
+  },
+  {
+    "id": "ts023",
+    "topicCluster": "training_science",
+    "title": "Running Economy",
+    "description": "Oxygen cost at a given pace. Improved by strength training, plyometrics, strides, and mileage accumulation. A 5% economy gain equals roughly 5% race improvement at same VO2max.",
+    "tags": [
+      "running_economy",
+      "efficiency",
+      "strength",
+      "plyometrics"
+    ],
+    "edges": [
+      {
+        "targetId": "ts025",
+        "weight": 0.83
+      },
+      {
+        "targetId": "ts018",
+        "weight": 0.8
+      }
+    ],
+    "positionX": -0.681,
+    "positionY": 3.75,
+    "positionZ": 0.474,
+    "color": "#4A90D9"
+  },
+  {
+    "id": "ts024",
+    "topicCluster": "training_science",
+    "title": "Tapering",
+    "description": "Reducing training volume 2\u20133 weeks before race while maintaining intensity. Allows full glycogen replenishment, tissue repair, and neuromuscular freshness. Do not add new workouts.",
+    "tags": [
+      "taper",
+      "race_week",
+      "volume_reduction",
+      "glycogen"
+    ],
+    "edges": [
+      {
+        "targetId": "ts025",
+        "weight": 0.88
+      },
+      {
+        "targetId": "ts021",
+        "weight": 0.81
+      },
+      {
+        "targetId": "ri018",
+        "weight": 0.9
+      }
+    ],
+    "positionX": 0.132,
+    "positionY": 3.625,
+    "positionZ": -0.585,
+    "color": "#4A90D9"
+  },
+  {
+    "id": "ts025",
+    "topicCluster": "training_science",
+    "title": "Overtraining Syndrome",
+    "description": "Chronic imbalance of stress and recovery. Symptoms: persistent fatigue, elevated resting HR, mood disturbance, performance decline. Requires 2\u20138 weeks full rest. Prevention > cure.",
+    "tags": [
+      "overtraining",
+      "ots",
+      "fatigue",
+      "resting_hr",
+      "rest"
+    ],
+    "edges": [
+      {
+        "targetId": "ts024",
+        "weight": 0.88
+      },
+      {
+        "targetId": "ts023",
+        "weight": 0.83
+      },
+      {
+        "targetId": "re007",
+        "weight": 0.8
+      }
+    ],
+    "positionX": 0.0,
+    "positionY": 3.5,
+    "positionZ": 0.0,
+    "color": "#4A90D9"
+  },
+  {
+    "id": "ip001",
+    "topicCluster": "injury_prevention",
+    "title": "Shin Splints (MTSS)",
+    "description": "Medial tibial stress syndrome: pain along the inner shin. Caused by rapid mileage increase, hard surfaces, or worn shoes. Treat with rest, ice, and gradual return. Address gait and footwear.",
+    "tags": [
+      "shin_splints",
+      "mtss",
+      "tibia",
+      "overuse"
+    ],
+    "edges": [
+      {
+        "targetId": "ip002",
+        "weight": 0.88
+      },
+      {
+        "targetId": "ip003",
+        "weight": 0.83
+      },
+      {
+        "targetId": "bm001",
+        "weight": 0.6
+      }
+    ],
+    "positionX": 4.33,
+    "positionY": -1.0,
+    "positionZ": 0.0,
+    "color": "#E8612C"
+  },
+  {
+    "id": "ip002",
+    "topicCluster": "injury_prevention",
+    "title": "IT Band Syndrome",
+    "description": "Iliotibial band friction syndrome: lateral knee pain. Caused by hip weakness, excessive downhill running, or sudden mileage increase. Treat: hip strengthening, foam rolling, reduce downhill.",
+    "tags": [
+      "itb",
+      "iliotibial",
+      "lateral_knee",
+      "hip_weakness"
+    ],
+    "edges": [
+      {
+        "targetId": "ip001",
+        "weight": 0.88
+      },
+      {
+        "targetId": "ip005",
+        "weight": 0.81
+      },
+      {
+        "targetId": "bm009",
+        "weight": 0.8
+      }
+    ],
+    "positionX": 3.888,
+    "positionY": -1.125,
+    "positionZ": 0.405,
+    "color": "#E8612C"
+  },
+  {
+    "id": "ip003",
+    "topicCluster": "injury_prevention",
+    "title": "Plantar Fasciitis",
+    "description": "Heel/arch pain from plantar fascia overload. Aggravated by tight calves and insufficient arch support. Morning pain is hallmark. Treat: calf stretching, foot strengthening, supportive footwear.",
+    "tags": [
+      "plantar_fasciitis",
+      "heel_pain",
+      "arch",
+      "calf_tightness"
+    ],
+    "edges": [
+      {
+        "targetId": "ip001",
+        "weight": 0.83
+      },
+      {
+        "targetId": "ip008",
+        "weight": 0.8
+      },
+      {
+        "targetId": "bm006",
+        "weight": 0.7
+      }
+    ],
+    "positionX": 4.402,
+    "positionY": -1.25,
+    "positionZ": -0.826,
+    "color": "#E8612C"
+  },
+  {
+    "id": "ip004",
+    "topicCluster": "injury_prevention",
+    "title": "Achilles Tendinopathy",
+    "description": "Overuse injury of the Achilles tendon. Insertional (at heel bone) vs mid-portion. Best treated with eccentric calf raises (Alfredson protocol). Avoid stretching acute Achilles.",
+    "tags": [
+      "achilles",
+      "tendinopathy",
+      "eccentric_loading",
+      "alfredson"
+    ],
+    "edges": [
+      {
+        "targetId": "ip009",
+        "weight": 0.8
+      },
+      {
+        "targetId": "ip001",
+        "weight": 0.79
+      }
+    ],
+    "positionX": 4.934,
+    "positionY": -1.375,
+    "positionZ": 0.787,
+    "color": "#E8612C"
+  },
+  {
+    "id": "ip005",
+    "topicCluster": "injury_prevention",
+    "title": "Stress Fractures",
+    "description": "Bone stress injuries from repetitive loading exceeding remodelling capacity. Common sites: tibia, metatarsals, navicular. Navicular and femoral neck are high-risk (no running). Requires imaging.",
+    "tags": [
+      "stress_fracture",
+      "bone_stress",
+      "metatarsal",
+      "tibia",
+      "navicular"
+    ],
+    "edges": [
+      {
+        "targetId": "ip002",
+        "weight": 0.81
+      },
+      {
+        "targetId": "ip010",
+        "weight": 0.8
+      },
+      {
+        "targetId": "nu017",
+        "weight": 0.5
+      }
+    ],
+    "positionX": 3.229,
+    "positionY": -1.5,
+    "positionZ": -0.195,
+    "color": "#E8612C"
+  },
+  {
+    "id": "ip006",
+    "topicCluster": "injury_prevention",
+    "title": "Runner's Knee (PFPS)",
+    "description": "Patellofemoral pain syndrome: diffuse anterior knee pain. Caused by quad weakness, hip weakness, or excessive pronation. Treatment: VMO strengthening, hip abductor work.",
+    "tags": [
+      "runners_knee",
+      "pfps",
+      "patellofemoral",
+      "quad",
+      "hip"
+    ],
+    "edges": [
+      {
+        "targetId": "ip011",
+        "weight": 0.8
+      },
+      {
+        "targetId": "ip003",
+        "weight": 0.79
+      }
+    ],
+    "positionX": 5.358,
+    "positionY": -1.625,
+    "positionZ": -0.654,
+    "color": "#E8612C"
+  },
+  {
+    "id": "ip007",
+    "topicCluster": "injury_prevention",
+    "title": "Hamstring Strain",
+    "description": "Grade 1\u20133 tears of the hamstring, usually at the proximal insertion or muscle belly. Common in speed sessions. Prevention: Nordic curls, progressive speed buildup, warm-up.",
+    "tags": [
+      "hamstring",
+      "strain",
+      "proximal",
+      "nordic_curls",
+      "speed"
+    ],
+    "edges": [
+      {
+        "targetId": "ip012",
+        "weight": 0.8
+      },
+      {
+        "targetId": "ip002",
+        "weight": 0.79
+      }
+    ],
+    "positionX": 3.993,
+    "positionY": -1.75,
+    "positionZ": 1.255,
+    "color": "#E8612C"
+  },
+  {
+    "id": "ip008",
+    "topicCluster": "injury_prevention",
+    "title": "Calf Strain",
+    "description": "Tear in gastrocnemius or soleus. Sudden sharp pain ('pull'). Grade 1: mild; Grade 3: complete rupture. RICE protocol; eccentric loading in rehabilitation.",
+    "tags": [
+      "calf",
+      "gastrocnemius",
+      "soleus",
+      "strain",
+      "eccentric"
+    ],
+    "edges": [
+      {
+        "targetId": "ip003",
+        "weight": 0.8
+      },
+      {
+        "targetId": "ip013",
+        "weight": 0.8
+      }
+    ],
+    "positionX": 3.702,
+    "positionY": -1.875,
+    "positionZ": -1.21,
+    "color": "#E8612C"
+  },
+  {
+    "id": "ip009",
+    "topicCluster": "injury_prevention",
+    "title": "10% Rule",
+    "description": "Increase weekly training volume by no more than 10% per week. Prevents cumulative load exceeding the musculoskeletal system's adaptation rate. Critical after a training break.",
+    "tags": [
+      "10_percent_rule",
+      "mileage_increase",
+      "load_management",
+      "injury_prevention"
+    ],
+    "edges": [
+      {
+        "targetId": "ip004",
+        "weight": 0.8
+      },
+      {
+        "targetId": "ip014",
+        "weight": 0.79
+      }
+    ],
+    "positionX": 5.658,
+    "positionY": -2.0,
+    "positionZ": 0.485,
+    "color": "#E8612C"
+  },
+  {
+    "id": "ip010",
+    "topicCluster": "injury_prevention",
+    "title": "Strength Training for Runners",
+    "description": "Hip, glute, and single-leg strength directly reduces injury risk. Key exercises: single-leg squats, hip thrusts, calf raises, Copenhagen planks. 2\u00d7/week is sufficient.",
+    "tags": [
+      "strength_training",
+      "hip_strength",
+      "glutes",
+      "single_leg",
+      "prevention"
+    ],
+    "edges": [
+      {
+        "targetId": "ip005",
+        "weight": 0.8
+      },
+      {
+        "targetId": "ip015",
+        "weight": 0.79
+      },
+      {
+        "targetId": "bm012",
+        "weight": 0.7
+      }
+    ],
+    "positionX": 2.988,
+    "positionY": -2.125,
+    "positionZ": 0.554,
+    "color": "#E8612C"
+  },
+  {
+    "id": "ip011",
+    "topicCluster": "injury_prevention",
+    "title": "Foam Rolling",
+    "description": "Self-myofascial release reduces perceived tightness and may improve short-term range of motion. Not a replacement for warming up or strength. Most effective post-run.",
+    "tags": [
+      "foam_rolling",
+      "self_myofascial",
+      "recovery",
+      "flexibility"
+    ],
+    "edges": [
+      {
+        "targetId": "ip006",
+        "weight": 0.8
+      },
+      {
+        "targetId": "ip016",
+        "weight": 0.79
+      }
+    ],
+    "positionX": 4.957,
+    "positionY": -2.25,
+    "positionZ": -1.34,
+    "color": "#E8612C"
+  },
+  {
+    "id": "ip012",
+    "topicCluster": "injury_prevention",
+    "title": "Shoe Rotation",
+    "description": "Rotating between two pairs of shoes (different stack heights/drop) allows midsole foam recovery and varies load distribution. Reduces injury risk vs single-shoe use.",
+    "tags": [
+      "shoe_rotation",
+      "footwear",
+      "midsole",
+      "drop",
+      "variety"
+    ],
+    "edges": [
+      {
+        "targetId": "ip007",
+        "weight": 0.8
+      },
+      {
+        "targetId": "ip017",
+        "weight": 0.79
+      }
+    ],
+    "positionX": 4.777,
+    "positionY": -2.375,
+    "positionZ": 1.426,
+    "color": "#E8612C"
+  },
+  {
+    "id": "ip013",
+    "topicCluster": "injury_prevention",
+    "title": "Gait Analysis",
+    "description": "Identifying biomechanical issues (overstriding, excessive pronation, hip drop) that increase injury risk. Video analysis at 60fps minimum. Interventions: cueing, drills, footwear, insoles.",
+    "tags": [
+      "gait_analysis",
+      "biomechanics",
+      "overstriding",
+      "pronation",
+      "hip_drop"
+    ],
+    "edges": [
+      {
+        "targetId": "ip018",
+        "weight": 0.8
+      },
+      {
+        "targetId": "ip008",
+        "weight": 0.8
+      }
+    ],
+    "positionX": 3.032,
+    "positionY": -2.5,
+    "positionZ": -0.752,
+    "color": "#E8612C"
+  },
+  {
+    "id": "ip014",
+    "topicCluster": "injury_prevention",
+    "title": "Warm-Up Protocol",
+    "description": "Dynamic warm-up (leg swings, hip circles, A-skips, B-skips, 5 min easy jog) reduces injury risk before hard sessions. Never stretch cold muscles statically before a run.",
+    "tags": [
+      "warm_up",
+      "dynamic_stretching",
+      "drills",
+      "injury_prevention"
+    ],
+    "edges": [
+      {
+        "targetId": "ip019",
+        "weight": 0.8
+      },
+      {
+        "targetId": "ip009",
+        "weight": 0.79
+      }
+    ],
+    "positionX": 5.79,
+    "positionY": -2.625,
+    "positionZ": -0.321,
+    "color": "#E8612C"
+  },
+  {
+    "id": "ip015",
+    "topicCluster": "injury_prevention",
+    "title": "Return to Run Protocol",
+    "description": "After injury, progress: walking \u2192 walk/run intervals \u2192 easy running \u2192 tempo. Each stage 3\u20137 days. Return to full training takes 2\u20134\u00d7 the lay-off period.",
+    "tags": [
+      "return_to_run",
+      "rehab_protocol",
+      "progressive_loading",
+      "walk_run"
+    ],
+    "edges": [
+      {
+        "targetId": "ip020",
+        "weight": 0.8
+      },
+      {
+        "targetId": "ip010",
+        "weight": 0.79
+      }
+    ],
+    "positionX": 3.479,
+    "positionY": -2.75,
+    "positionZ": 1.21,
+    "color": "#E8612C"
+  },
+  {
+    "id": "ip016",
+    "topicCluster": "injury_prevention",
+    "title": "Sleep and Injury Risk",
+    "description": "Athletes sleeping <6h/night have 1.7\u00d7 higher injury risk (Milewski et al). Immune function, tissue repair, and HGH release peak during deep sleep. 8\u20139h is optimal for athletes.",
+    "tags": [
+      "sleep",
+      "injury_risk",
+      "recovery",
+      "hgh",
+      "tissue_repair"
+    ],
+    "edges": [
+      {
+        "targetId": "ip021",
+        "weight": 0.8
+      },
+      {
+        "targetId": "ip011",
+        "weight": 0.79
+      }
+    ],
+    "positionX": 4.143,
+    "positionY": -2.875,
+    "positionZ": -1.44,
+    "color": "#E8612C"
+  },
+  {
+    "id": "ip017",
+    "topicCluster": "injury_prevention",
+    "title": "Bone Health and Stress Reactions",
+    "description": "Low bone density (common in athletes with RED-S) dramatically increases stress fracture risk. DEXA scanning indicated for recurrent bone stress injuries. Address nutrition first.",
+    "tags": [
+      "bone_health",
+      "reds",
+      "dexa",
+      "stress_reaction",
+      "nutrition"
+    ],
+    "edges": [
+      {
+        "targetId": "ip022",
+        "weight": 0.8
+      },
+      {
+        "targetId": "ip012",
+        "weight": 0.79
+      }
+    ],
+    "positionX": 5.411,
+    "positionY": -3.0,
+    "positionZ": 0.911,
+    "color": "#E8612C"
+  },
+  {
+    "id": "ip018",
+    "topicCluster": "injury_prevention",
+    "title": "Hip Flexor Tightness",
+    "description": "Tight psoas/iliopsoas limits hip extension and increases anterior pelvic tilt, loading the lower back and hamstrings. Address with hip flexor stretches post-run and hip mobility work.",
+    "tags": [
+      "hip_flexor",
+      "psoas",
+      "anterior_pelvic_tilt",
+      "hip_extension",
+      "mobility"
+    ],
+    "edges": [
+      {
+        "targetId": "ip023",
+        "weight": 0.8
+      },
+      {
+        "targetId": "ip013",
+        "weight": 0.8
+      }
+    ],
+    "positionX": 2.968,
+    "positionY": -3.125,
+    "positionZ": 0.056,
+    "color": "#E8612C"
+  },
+  {
+    "id": "ip019",
+    "topicCluster": "injury_prevention",
+    "title": "Piriformis Syndrome",
+    "description": "Piriformis muscle irritates sciatic nerve, causing buttock/hip pain that mimics disc pathology. Common in runners with weak external hip rotators. Piriformis stretches + hip strengthening.",
+    "tags": [
+      "piriformis",
+      "sciatic",
+      "hip_rotators",
+      "nerve",
+      "buttock_pain"
+    ],
+    "edges": [
+      {
+        "targetId": "ip014",
+        "weight": 0.8
+      },
+      {
+        "targetId": "ip024",
+        "weight": 0.79
+      }
+    ],
+    "positionX": 5.251,
+    "positionY": -3.25,
+    "positionZ": -0.916,
+    "color": "#E8612C"
+  },
+  {
+    "id": "ip020",
+    "topicCluster": "injury_prevention",
+    "title": "Blisters and Skin Care",
+    "description": "Friction blisters from moisture + rubbing. Prevention: technical socks, BodyGlide/Vaseline on hot spots, well-fitted shoes. Pop large blisters with sterile needle, leave roof intact.",
+    "tags": [
+      "blisters",
+      "friction",
+      "socks",
+      "bodyglide",
+      "foot_care"
+    ],
+    "edges": [
+      {
+        "targetId": "ip015",
+        "weight": 0.8
+      },
+      {
+        "targetId": "ip023",
+        "weight": 0.79
+      }
+    ],
+    "positionX": 4.274,
+    "positionY": -3.375,
+    "positionZ": 1.217,
+    "color": "#E8612C"
+  },
+  {
+    "id": "ip021",
+    "topicCluster": "injury_prevention",
+    "title": "Ankle Sprains",
+    "description": "Grade 1\u20133 lateral ankle sprains. PRICE protocol (Protection, Rest, Ice, Compression, Elevation). Proprioceptive rehabilitation essential before return to running.",
+    "tags": [
+      "ankle_sprain",
+      "lateral",
+      "proprioception",
+      "rice",
+      "rehab"
+    ],
+    "edges": [
+      {
+        "targetId": "ip024",
+        "weight": 0.81
+      },
+      {
+        "targetId": "ip016",
+        "weight": 0.8
+      }
+    ],
+    "positionX": 3.614,
+    "positionY": -3.5,
+    "positionZ": -0.858,
+    "color": "#E8612C"
+  },
+  {
+    "id": "ip022",
+    "topicCluster": "injury_prevention",
+    "title": "Lower Back Pain in Runners",
+    "description": "Usually muscular or related to hip/core weakness rather than disc pathology. Excessive anterior pelvic tilt and weak glutes are primary drivers. Core stability and hip strength are key.",
+    "tags": [
+      "lower_back",
+      "lumbar",
+      "core",
+      "pelvic_tilt",
+      "glutes"
+    ],
+    "edges": [
+      {
+        "targetId": "ip017",
+        "weight": 0.8
+      },
+      {
+        "targetId": "ip025",
+        "weight": 0.79
+      }
+    ],
+    "positionX": 5.313,
+    "positionY": -3.625,
+    "positionZ": 0.132,
+    "color": "#E8612C"
+  },
+  {
+    "id": "ip023",
+    "topicCluster": "injury_prevention",
+    "title": "Toenail Injuries",
+    "description": "Black toenails from downhill running or tight toe box. Prevention: 0.5cm space in front of longest toe, lace properly for descents. Prevention > treatment.",
+    "tags": [
+      "toenail",
+      "black_toenail",
+      "downhill",
+      "shoe_fit",
+      "foot_care"
+    ],
+    "edges": [
+      {
+        "targetId": "ip025",
+        "weight": 0.83
+      },
+      {
+        "targetId": "ip018",
+        "weight": 0.8
+      }
+    ],
+    "positionX": 3.649,
+    "positionY": -3.75,
+    "positionZ": 0.474,
+    "color": "#E8612C"
+  },
+  {
+    "id": "ip024",
+    "topicCluster": "injury_prevention",
+    "title": "Hydration and Injury Risk",
+    "description": "Dehydration stiffens tendons and reduces cartilage lubrication, increasing injury susceptibility. Even 2% dehydration impairs proprioception and decision-making during hard sessions.",
+    "tags": [
+      "hydration",
+      "tendons",
+      "cartilage",
+      "dehydration",
+      "proprioception"
+    ],
+    "edges": [
+      {
+        "targetId": "ip025",
+        "weight": 0.88
+      },
+      {
+        "targetId": "ip021",
+        "weight": 0.81
+      }
+    ],
+    "positionX": 4.462,
+    "positionY": -3.875,
+    "positionZ": -0.585,
+    "color": "#E8612C"
+  },
+  {
+    "id": "ip025",
+    "topicCluster": "injury_prevention",
+    "title": "Training Load Monitoring",
+    "description": "Acute:Chronic Workload Ratio (ACWR) above 1.5 significantly increases injury risk. Keep ACWR 0.8\u20131.3 for safe training build. Spike in workload = spike in risk.",
+    "tags": [
+      "acwr",
+      "training_load",
+      "workload_ratio",
+      "injury_risk",
+      "monitoring"
+    ],
+    "edges": [
+      {
+        "targetId": "ip024",
+        "weight": 0.88
+      },
+      {
+        "targetId": "ip023",
+        "weight": 0.83
+      }
+    ],
+    "positionX": 4.33,
+    "positionY": -4.0,
+    "positionZ": 0.0,
+    "color": "#E8612C"
+  },
+  {
+    "id": "nu001",
+    "topicCluster": "nutrition",
+    "title": "Carbohydrate Fuelling",
+    "description": "Carbs are the primary fuel above easy pace. Glycogen stores (~90 min at marathon pace) must be maximised before long sessions and races. Aim 6\u201310g/kg/day on high-training days.",
+    "tags": [
+      "carbohydrates",
+      "glycogen",
+      "fuelling",
+      "race_nutrition"
+    ],
+    "edges": [
+      {
+        "targetId": "nu002",
+        "weight": 0.86
+      },
+      {
+        "targetId": "nu003",
+        "weight": 0.81
+      },
+      {
+        "targetId": "ri005",
+        "weight": 0.9
+      }
+    ],
+    "positionX": -4.33,
+    "positionY": -1.0,
+    "positionZ": 0.0,
+    "color": "#4CAF50"
+  },
+  {
+    "id": "nu002",
+    "topicCluster": "nutrition",
+    "title": "Race-Day Nutrition Strategy",
+    "description": "Pre-race: high-carb meal 3\u20134h before, small carb snack 1h before. During marathon: 40\u201360g carbs/hr from 30 min in, every 20\u201330 min. Post-race: carb+protein within 30 min.",
+    "tags": [
+      "race_day",
+      "carbohydrates",
+      "gels",
+      "race_nutrition",
+      "pre_race"
+    ],
+    "edges": [
+      {
+        "targetId": "nu001",
+        "weight": 0.86
+      },
+      {
+        "targetId": "nu005",
+        "weight": 0.78
+      }
+    ],
+    "positionX": -4.824,
+    "positionY": -1.158,
+    "positionZ": 0.453,
+    "color": "#4CAF50"
+  },
+  {
+    "id": "nu003",
+    "topicCluster": "nutrition",
+    "title": "Protein for Recovery",
+    "description": "1.6\u20132.2g protein/kg/day for endurance athletes. 20\u201340g within 30 min post-run maximises muscle protein synthesis. Leucine-rich sources (dairy, whey, eggs) are most anabolic.",
+    "tags": [
+      "protein",
+      "recovery",
+      "muscle_synthesis",
+      "leucine",
+      "post_run"
+    ],
+    "edges": [
+      {
+        "targetId": "nu001",
+        "weight": 0.81
+      },
+      {
+        "targetId": "nu008",
+        "weight": 0.77
+      },
+      {
+        "targetId": "re013",
+        "weight": 0.8
+      }
+    ],
+    "positionX": -4.25,
+    "positionY": -1.316,
+    "positionZ": -0.917,
+    "color": "#4CAF50"
+  },
+  {
+    "id": "nu004",
+    "topicCluster": "nutrition",
+    "title": "Fat as Fuel",
+    "description": "At easy pace (<70% HRmax), 50\u201360% of energy from fat. High-fat oxidation capacity extends glycogen stores in marathon. Trained runners oxidise ~1g fat/min vs 0.5g in untrained.",
+    "tags": [
+      "fat",
+      "fat_oxidation",
+      "easy_pace",
+      "glycogen_sparing",
+      "fuel"
+    ],
+    "edges": [
+      {
+        "targetId": "nu009",
+        "weight": 0.77
+      },
+      {
+        "targetId": "nu001",
+        "weight": 0.76
+      }
+    ],
+    "positionX": -3.664,
+    "positionY": -1.474,
+    "positionZ": 0.868,
+    "color": "#4CAF50"
+  },
+  {
+    "id": "nu005",
+    "topicCluster": "nutrition",
+    "title": "Electrolyte Management",
+    "description": "Sodium (500\u20131000mg/hr), potassium, magnesium lost in sweat. Replace during efforts >90 min or in heat. Hyponatremia (over-drinking plain water) is more dangerous than dehydration in marathons.",
+    "tags": [
+      "electrolytes",
+      "sodium",
+      "hyponatremia",
+      "sweat",
+      "hydration"
+    ],
+    "edges": [
+      {
+        "targetId": "nu002",
+        "weight": 0.78
+      },
+      {
+        "targetId": "nu010",
+        "weight": 0.77
+      },
+      {
+        "targetId": "ri012",
+        "weight": 0.7
+      }
+    ],
+    "positionX": -5.534,
+    "positionY": -1.632,
+    "positionZ": -0.213,
+    "color": "#4CAF50"
+  },
+  {
+    "id": "nu006",
+    "topicCluster": "nutrition",
+    "title": "Sweat Rate Testing",
+    "description": "Individual sweat rates vary 0.5\u20132.5L/hr. Test: weigh pre/post run; each 1kg loss \u2248 1L sweat. Aim to replace 80% of losses. Do not overdrink.",
+    "tags": [
+      "sweat_rate",
+      "hydration",
+      "bodyweight",
+      "fluid_loss"
+    ],
+    "edges": [
+      {
+        "targetId": "nu011",
+        "weight": 0.77
+      },
+      {
+        "targetId": "nu003",
+        "weight": 0.77
+      }
+    ],
+    "positionX": -3.215,
+    "positionY": -1.789,
+    "positionZ": -0.709,
+    "color": "#4CAF50"
+  },
+  {
+    "id": "nu007",
+    "topicCluster": "nutrition",
+    "title": "Gel and Sports Drink Selection",
+    "description": "Gels: ~25g carbs each. Sports drinks: ~14g carbs/250ml. Mix glucose:fructose 2:1 improves absorption above 60g/hr. Maltodextrin + fructose blends recommended for long efforts.",
+    "tags": [
+      "gels",
+      "sports_drink",
+      "carbohydrates",
+      "glucose_fructose",
+      "absorption"
+    ],
+    "edges": [
+      {
+        "targetId": "nu012",
+        "weight": 0.77
+      },
+      {
+        "targetId": "nu002",
+        "weight": 0.76
+      }
+    ],
+    "positionX": -4.692,
+    "positionY": -1.947,
+    "positionZ": 1.347,
+    "color": "#4CAF50"
+  },
+  {
+    "id": "nu008",
+    "topicCluster": "nutrition",
+    "title": "Gut Training",
+    "description": "GI distress during races is common but trainable. Practice consuming carbs at race intensity in training. Begin with 30g/hr, progress to 60\u201390g/hr over weeks.",
+    "tags": [
+      "gut_training",
+      "gi_distress",
+      "nausea",
+      "carbohydrates",
+      "race_fuelling"
+    ],
+    "edges": [
+      {
+        "targetId": "nu013",
+        "weight": 0.77
+      },
+      {
+        "targetId": "nu003",
+        "weight": 0.77
+      },
+      {
+        "targetId": "ri005",
+        "weight": 0.7
+      }
+    ],
+    "positionX": -4.997,
+    "positionY": -2.105,
+    "positionZ": -1.284,
+    "color": "#4CAF50"
+  },
+  {
+    "id": "nu009",
+    "topicCluster": "nutrition",
+    "title": "Iron and Endurance Performance",
+    "description": "Iron deficiency (common in female runners, vegetarians, high-mileage athletes) impairs O\u2082 transport. Symptoms: fatigue, pale skin, elevated HR. Monitor ferritin; aim >40ng/mL.",
+    "tags": [
+      "iron",
+      "ferritin",
+      "anaemia",
+      "female_athletes",
+      "fatigue"
+    ],
+    "edges": [
+      {
+        "targetId": "nu014",
+        "weight": 0.77
+      },
+      {
+        "targetId": "nu004",
+        "weight": 0.77
+      }
+    ],
+    "positionX": -2.939,
+    "positionY": -2.263,
+    "positionZ": 0.508,
+    "color": "#4CAF50"
+  },
+  {
+    "id": "nu010",
+    "topicCluster": "nutrition",
+    "title": "Caffeine for Performance",
+    "description": "3\u20136mg/kg body weight 30\u201360 min pre-race improves endurance performance by ~3%. Adenosine receptor antagonist. Side effects: GI upset, anxiety in sensitive athletes. Do not try race-day for first time.",
+    "tags": [
+      "caffeine",
+      "performance",
+      "adenosine",
+      "pre_race",
+      "stimulant"
+    ],
+    "edges": [
+      {
+        "targetId": "nu005",
+        "weight": 0.77
+      },
+      {
+        "targetId": "nu015",
+        "weight": 0.77
+      }
+    ],
+    "positionX": -5.715,
+    "positionY": -2.421,
+    "positionZ": 0.572,
+    "color": "#4CAF50"
+  },
+  {
+    "id": "nu011",
+    "topicCluster": "nutrition",
+    "title": "Vitamin D and Athletic Performance",
+    "description": "Deficiency widespread in athletes, especially indoors or northern latitudes. Affects bone health, immune function, and muscle function. Target 40\u201360ng/mL. Supplement 2000\u20134000 IU/day in winter.",
+    "tags": [
+      "vitamin_d",
+      "bone_health",
+      "immune",
+      "muscle_function",
+      "supplementation"
+    ],
+    "edges": [
+      {
+        "targetId": "nu016",
+        "weight": 0.77
+      },
+      {
+        "targetId": "nu006",
+        "weight": 0.77
+      }
+    ],
+    "positionX": -3.695,
+    "positionY": -2.579,
+    "positionZ": -1.357,
+    "color": "#4CAF50"
+  },
+  {
+    "id": "nu012",
+    "topicCluster": "nutrition",
+    "title": "Post-Run Recovery Nutrition",
+    "description": "Golden window: 30\u201360 min post-run. Consume 0.8g carbs/kg + 20\u201340g protein. Chocolate milk is evidence-backed. Speeds glycogen resynthesis and muscle repair.",
+    "tags": [
+      "post_run",
+      "recovery_nutrition",
+      "glycogen",
+      "protein",
+      "chocolate_milk"
+    ],
+    "edges": [
+      {
+        "targetId": "nu007",
+        "weight": 0.77
+      },
+      {
+        "targetId": "nu017",
+        "weight": 0.77
+      }
+    ],
+    "positionX": -3.887,
+    "positionY": -2.737,
+    "positionZ": 1.413,
+    "color": "#4CAF50"
+  },
+  {
+    "id": "nu013",
+    "topicCluster": "nutrition",
+    "title": "RED-S (Relative Energy Deficiency in Sport)",
+    "description": "Chronic energy deficit in athletes. Impairs bone density, hormonal function, immune system, and performance. More common in female athletes. Address via dietitian.",
+    "tags": [
+      "reds",
+      "energy_deficiency",
+      "bone_density",
+      "hormones",
+      "female_athletes"
+    ],
+    "edges": [
+      {
+        "targetId": "nu008",
+        "weight": 0.77
+      },
+      {
+        "targetId": "nu018",
+        "weight": 0.77
+      },
+      {
+        "targetId": "ip017",
+        "weight": 0.8
+      }
+    ],
+    "positionX": -5.582,
+    "positionY": -2.895,
+    "positionZ": -0.726,
+    "color": "#4CAF50"
+  },
+  {
+    "id": "nu014",
+    "topicCluster": "nutrition",
+    "title": "Carbohydrate Loading",
+    "description": "Protocol for marathon and longer: 3 days of high-carb intake (10\u201312g/kg/day) combined with taper. Increases muscle glycogen stores by 20\u201330%. Expect 1\u20132kg weight gain from water.",
+    "tags": [
+      "carb_loading",
+      "glycogen",
+      "taper",
+      "marathon_prep",
+      "pre_race"
+    ],
+    "edges": [
+      {
+        "targetId": "nu009",
+        "weight": 0.77
+      },
+      {
+        "targetId": "nu019",
+        "weight": 0.76
+      }
+    ],
+    "positionX": -2.968,
+    "positionY": -3.053,
+    "positionZ": -0.299,
+    "color": "#4CAF50"
+  },
+  {
+    "id": "nu015",
+    "topicCluster": "nutrition",
+    "title": "Beetroot/Nitrate Supplementation",
+    "description": "Dietary nitrates (beetroot juice) convert to nitric oxide, improving muscle efficiency by ~2%. Dose: 300\u2013600mg nitrate, 2\u20133h before effort. Acute and chronic supplementation both effective.",
+    "tags": [
+      "beetroot",
+      "nitrates",
+      "nitric_oxide",
+      "efficiency",
+      "supplementation"
+    ],
+    "edges": [
+      {
+        "targetId": "nu010",
+        "weight": 0.77
+      },
+      {
+        "targetId": "nu018",
+        "weight": 0.77
+      }
+    ],
+    "positionX": -5.09,
+    "positionY": -3.211,
+    "positionZ": 1.081,
+    "color": "#4CAF50"
+  },
+  {
+    "id": "nu016",
+    "topicCluster": "nutrition",
+    "title": "Creatine for Endurance Athletes",
+    "description": "Not traditionally endurance-focused, but creatine aids sprint and strength elements of training, and may improve recovery. 3\u20135g/day maintenance. May cause 1\u20132kg weight gain initially.",
+    "tags": [
+      "creatine",
+      "strength",
+      "sprint",
+      "supplementation",
+      "recovery"
+    ],
+    "edges": [
+      {
+        "targetId": "nu019",
+        "weight": 0.78
+      },
+      {
+        "targetId": "nu011",
+        "weight": 0.77
+      }
+    ],
+    "positionX": -4.487,
+    "positionY": -3.368,
+    "positionZ": -1.213,
+    "color": "#4CAF50"
+  },
+  {
+    "id": "nu017",
+    "topicCluster": "nutrition",
+    "title": "Hydration Strategy",
+    "description": "General: 400\u2013800ml/hr during running, adjusted for conditions. Drink to thirst in training; for races >90 min follow a plan. Clear to pale-yellow urine indicates adequate hydration.",
+    "tags": [
+      "hydration",
+      "fluid_intake",
+      "urine_colour",
+      "thirst",
+      "race_strategy"
+    ],
+    "edges": [
+      {
+        "targetId": "nu012",
+        "weight": 0.77
+      },
+      {
+        "targetId": "nu020",
+        "weight": 0.76
+      }
+    ],
+    "positionX": -3.494,
+    "positionY": -3.526,
+    "positionZ": 0.705,
+    "color": "#4CAF50"
+  },
+  {
+    "id": "nu018",
+    "topicCluster": "nutrition",
+    "title": "Pre-Run Meal Timing",
+    "description": "Full meal 3\u20134h before; snack 1\u20131.5h before. High-fat/high-fibre foods before running risk GI distress. Avoid high-FODMAP foods the night before long runs.",
+    "tags": [
+      "pre_run",
+      "meal_timing",
+      "gi_distress",
+      "high_fodmap",
+      "fuelling"
+    ],
+    "edges": [
+      {
+        "targetId": "nu020",
+        "weight": 0.81
+      },
+      {
+        "targetId": "nu013",
+        "weight": 0.77
+      }
+    ],
+    "positionX": -5.25,
+    "positionY": -3.684,
+    "positionZ": 0.038,
+    "color": "#4CAF50"
+  },
+  {
+    "id": "nu019",
+    "topicCluster": "nutrition",
+    "title": "Omega-3 Fatty Acids",
+    "description": "EPA and DHA reduce exercise-induced inflammation and may enhance muscle protein synthesis. 2\u20134g/day from fish oil. Important for vegetarian/vegan athletes who lack dietary sources.",
+    "tags": [
+      "omega3",
+      "epa",
+      "dha",
+      "anti_inflammatory",
+      "fish_oil",
+      "vegan"
+    ],
+    "edges": [
+      {
+        "targetId": "nu020",
+        "weight": 0.86
+      },
+      {
+        "targetId": "nu016",
+        "weight": 0.78
+      }
+    ],
+    "positionX": -3.855,
+    "positionY": -3.842,
+    "positionZ": -0.473,
+    "color": "#4CAF50"
+  },
+  {
+    "id": "nu020",
+    "topicCluster": "nutrition",
+    "title": "Alcohol and Recovery",
+    "description": "Even moderate alcohol (>0.5g/kg) within 4h of exercise significantly impairs muscle protein synthesis, glycogen storage, and sleep quality. Delay consumption until recovery is well established.",
+    "tags": [
+      "alcohol",
+      "recovery",
+      "muscle_protein",
+      "glycogen",
+      "sleep"
+    ],
+    "edges": [
+      {
+        "targetId": "nu019",
+        "weight": 0.86
+      },
+      {
+        "targetId": "nu018",
+        "weight": 0.81
+      }
+    ],
+    "positionX": -4.33,
+    "positionY": -4.0,
+    "positionZ": 0.0,
+    "color": "#4CAF50"
+  },
+  {
+    "id": "re001",
+    "topicCluster": "recovery",
+    "title": "Sleep Optimisation",
+    "description": "8\u20139h of sleep is optimal for athletes. Growth hormone and testosterone peak during slow-wave sleep. Consistent sleep/wake times amplify recovery. Blue light restriction 1\u20132h before bed.",
+    "tags": [
+      "sleep",
+      "growth_hormone",
+      "testosterone",
+      "circadian",
+      "blue_light"
+    ],
+    "edges": [
+      {
+        "targetId": "re002",
+        "weight": 0.86
+      },
+      {
+        "targetId": "re003",
+        "weight": 0.81
+      },
+      {
+        "targetId": "mp001",
+        "weight": 0.6
+      },
+      {
+        "targetId": "ts025",
+        "weight": 0.7
+      }
+    ],
+    "positionX": 0.0,
+    "positionY": -3.5,
+    "positionZ": 0.0,
+    "color": "#9C27B0"
+  },
+  {
+    "id": "re002",
+    "topicCluster": "recovery",
+    "title": "Active Recovery",
+    "description": "Low-intensity movement (easy walk, swim, or Z1 run at <65% HRmax) the day after a hard session flushes metabolic waste and reduces DOMS more effectively than passive rest.",
+    "tags": [
+      "active_recovery",
+      "z1",
+      "doms",
+      "blood_flow",
+      "flush"
+    ],
+    "edges": [
+      {
+        "targetId": "re001",
+        "weight": 0.86
+      },
+      {
+        "targetId": "re005",
+        "weight": 0.78
+      }
+    ],
+    "positionX": -0.494,
+    "positionY": -3.658,
+    "positionZ": 0.453,
+    "color": "#9C27B0"
+  },
+  {
+    "id": "re003",
+    "topicCluster": "recovery",
+    "title": "Ice Baths and Cold Water Immersion",
+    "description": "10\u201315 min at 10\u201315\u00b0C reduces acute inflammation and perceived soreness. Best used after competitions, not after strength training (blunts hypertrophy signal). 2\u20134h post-exercise is optimal timing.",
+    "tags": [
+      "ice_bath",
+      "cold_water_immersion",
+      "cwi",
+      "inflammation",
+      "soreness"
+    ],
+    "edges": [
+      {
+        "targetId": "re001",
+        "weight": 0.81
+      },
+      {
+        "targetId": "re008",
+        "weight": 0.77
+      }
+    ],
+    "positionX": 0.08,
+    "positionY": -3.816,
+    "positionZ": -0.917,
+    "color": "#9C27B0"
+  },
+  {
+    "id": "re004",
+    "topicCluster": "recovery",
+    "title": "Compression Garments",
+    "description": "Compression socks/tights post-exercise reduce swelling and perceived soreness by 10\u201315% in studies. Particularly useful for travel after races. Wear for 2\u20134h post-run.",
+    "tags": [
+      "compression",
+      "recovery_garments",
+      "swelling",
+      "soreness",
+      "travel"
+    ],
+    "edges": [
+      {
+        "targetId": "re009",
+        "weight": 0.77
+      },
+      {
+        "targetId": "re001",
+        "weight": 0.76
+      }
+    ],
+    "positionX": 0.666,
+    "positionY": -3.974,
+    "positionZ": 0.868,
+    "color": "#9C27B0"
+  },
+  {
+    "id": "re005",
+    "topicCluster": "recovery",
+    "title": "Massage for Recovery",
+    "description": "Sports massage 24\u201348h post-hard-session reduces DOMS and perceived tightness. Does not speed physiological recovery but improves psychological readiness. Not recommended immediately post-race.",
+    "tags": [
+      "massage",
+      "sports_massage",
+      "doms",
+      "psychological",
+      "recovery"
+    ],
+    "edges": [
+      {
+        "targetId": "re002",
+        "weight": 0.78
+      },
+      {
+        "targetId": "re010",
+        "weight": 0.77
+      }
+    ],
+    "positionX": -1.204,
+    "positionY": -4.132,
+    "positionZ": -0.213,
+    "color": "#9C27B0"
+  },
+  {
+    "id": "re006",
+    "topicCluster": "recovery",
+    "title": "HRV Monitoring",
+    "description": "Heart Rate Variability reflects autonomic nervous system recovery. Low HRV (vs personal baseline) indicates incomplete recovery. Measure first thing in morning before rising. Apps: HRV4Training, Whoop.",
+    "tags": [
+      "hrv",
+      "heart_rate_variability",
+      "autonomic",
+      "recovery_monitoring",
+      "whoop"
+    ],
+    "edges": [
+      {
+        "targetId": "re011",
+        "weight": 0.77
+      },
+      {
+        "targetId": "re003",
+        "weight": 0.77
+      },
+      {
+        "targetId": "ts006",
+        "weight": 0.7
+      }
+    ],
+    "positionX": 1.115,
+    "positionY": -4.289,
+    "positionZ": -0.709,
+    "color": "#9C27B0"
+  },
+  {
+    "id": "re007",
+    "topicCluster": "recovery",
+    "title": "Resting Heart Rate Monitoring",
+    "description": "Elevated resting HR (>7 bpm above normal) is a reliable indicator of incomplete recovery, illness, or overreaching. Measure in the same conditions daily. Trend matters more than individual readings.",
+    "tags": [
+      "resting_hr",
+      "overreaching",
+      "illness",
+      "monitoring",
+      "fatigue"
+    ],
+    "edges": [
+      {
+        "targetId": "re012",
+        "weight": 0.77
+      },
+      {
+        "targetId": "re002",
+        "weight": 0.76
+      }
+    ],
+    "positionX": -0.362,
+    "positionY": -4.447,
+    "positionZ": 1.347,
+    "color": "#9C27B0"
+  },
+  {
+    "id": "re008",
+    "topicCluster": "recovery",
+    "title": "Deload Weeks",
+    "description": "Every 3\u20134 weeks, reduce training volume by 30\u201340% while maintaining intensity. Allows full tissue repair and supercompensation. Athletes often fear deloads but emerge fitter.",
+    "tags": [
+      "deload",
+      "recovery_week",
+      "volume_reduction",
+      "supercompensation",
+      "periodisation"
+    ],
+    "edges": [
+      {
+        "targetId": "re013",
+        "weight": 0.77
+      },
+      {
+        "targetId": "re003",
+        "weight": 0.77
+      },
+      {
+        "targetId": "ts005",
+        "weight": 0.8
+      }
+    ],
+    "positionX": -0.667,
+    "positionY": -4.605,
+    "positionZ": -1.284,
+    "color": "#9C27B0"
+  },
+  {
+    "id": "re009",
+    "topicCluster": "recovery",
+    "title": "Napping for Performance",
+    "description": "20\u201330 min naps improve alertness, reaction time, and endurance performance. Napping 30\u201390 min before an afternoon or evening session improves output. Keep under 30 min to avoid sleep inertia.",
+    "tags": [
+      "napping",
+      "alertness",
+      "performance",
+      "sleep_inertia",
+      "afternoon"
+    ],
+    "edges": [
+      {
+        "targetId": "re014",
+        "weight": 0.77
+      },
+      {
+        "targetId": "re004",
+        "weight": 0.77
+      }
+    ],
+    "positionX": 1.391,
+    "positionY": -4.763,
+    "positionZ": 0.508,
+    "color": "#9C27B0"
+  },
+  {
+    "id": "re010",
+    "topicCluster": "recovery",
+    "title": "Parasympathetic Recovery Techniques",
+    "description": "Box breathing (4-4-4-4), progressive muscle relaxation, and yoga nidra activate the parasympathetic nervous system, reducing cortisol and accelerating recovery between hard sessions.",
+    "tags": [
+      "breathwork",
+      "box_breathing",
+      "parasympathetic",
+      "cortisol",
+      "relaxation"
+    ],
+    "edges": [
+      {
+        "targetId": "re005",
+        "weight": 0.77
+      },
+      {
+        "targetId": "re015",
+        "weight": 0.77
+      }
+    ],
+    "positionX": -1.385,
+    "positionY": -4.921,
+    "positionZ": 0.572,
+    "color": "#9C27B0"
+  },
+  {
+    "id": "re011",
+    "topicCluster": "recovery",
+    "title": "DOMS Management",
+    "description": "Delayed Onset Muscle Soreness peaks 24\u201348h post-unaccustomed exercise. Managed by easy movement, adequate protein, and patience. Not caused by lactic acid. Indicates adaptation stimulus.",
+    "tags": [
+      "doms",
+      "delayed_onset",
+      "muscle_soreness",
+      "adaptation",
+      "lactic_acid"
+    ],
+    "edges": [
+      {
+        "targetId": "re016",
+        "weight": 0.77
+      },
+      {
+        "targetId": "re006",
+        "weight": 0.77
+      }
+    ],
+    "positionX": 0.635,
+    "positionY": -5.079,
+    "positionZ": -1.357,
+    "color": "#9C27B0"
+  },
+  {
+    "id": "re012",
+    "topicCluster": "recovery",
+    "title": "Sauna and Heat Therapy",
+    "description": "Post-exercise sauna (15\u201320 min, >80\u00b0C) increases plasma volume, improves heat tolerance, and may increase EPO. 3\u20134 sessions/week in training blocks. Rehydrate immediately after.",
+    "tags": [
+      "sauna",
+      "heat_therapy",
+      "plasma_volume",
+      "epo",
+      "heat_acclimatisation"
+    ],
+    "edges": [
+      {
+        "targetId": "re007",
+        "weight": 0.77
+      },
+      {
+        "targetId": "re017",
+        "weight": 0.77
+      }
+    ],
+    "positionX": 0.443,
+    "positionY": -5.237,
+    "positionZ": 1.413,
+    "color": "#9C27B0"
+  },
+  {
+    "id": "re013",
+    "topicCluster": "recovery",
+    "title": "Nutrition Timing in Recovery",
+    "description": "Immediate post-run window (0\u201330 min) is critical. 0.8g carbs/kg + 20\u201340g protein. Second meal within 2h continues glycogen replenishment. Skipping recovery nutrition extends fatigue by 24\u201348h.",
+    "tags": [
+      "nutrition_timing",
+      "post_run",
+      "glycogen",
+      "protein",
+      "carbohydrates"
+    ],
+    "edges": [
+      {
+        "targetId": "re008",
+        "weight": 0.77
+      },
+      {
+        "targetId": "re018",
+        "weight": 0.77
+      }
+    ],
+    "positionX": -1.252,
+    "positionY": -5.395,
+    "positionZ": -0.726,
+    "color": "#9C27B0"
+  },
+  {
+    "id": "re014",
+    "topicCluster": "recovery",
+    "title": "Training Load Periodisation",
+    "description": "Hard day / easy day principle. Never stack two hard sessions back-to-back without an easy day. Weekend long run + quality session should be separated by at least 2 easy days.",
+    "tags": [
+      "hard_easy",
+      "periodisation",
+      "training_load",
+      "load_management",
+      "stacking"
+    ],
+    "edges": [
+      {
+        "targetId": "re009",
+        "weight": 0.77
+      },
+      {
+        "targetId": "re019",
+        "weight": 0.76
+      }
+    ],
+    "positionX": 1.362,
+    "positionY": -5.553,
+    "positionZ": -0.299,
+    "color": "#9C27B0"
+  },
+  {
+    "id": "re015",
+    "topicCluster": "recovery",
+    "title": "Cognitive Recovery",
+    "description": "Mental fatigue from work/life stress impairs physical training quality and recovery rate. Perceived exertion at a given pace increases under mental fatigue. Recovery is holistic.",
+    "tags": [
+      "cognitive_recovery",
+      "mental_fatigue",
+      "perceived_exertion",
+      "stress",
+      "holistic"
+    ],
+    "edges": [
+      {
+        "targetId": "re010",
+        "weight": 0.77
+      },
+      {
+        "targetId": "re018",
+        "weight": 0.77
+      }
+    ],
+    "positionX": -0.76,
+    "positionY": -5.711,
+    "positionZ": 1.081,
+    "color": "#9C27B0"
+  },
+  {
+    "id": "re016",
+    "topicCluster": "recovery",
+    "title": "Mobility and Flexibility",
+    "description": "Post-run static stretching (hold 30\u201360s) improves long-term range of motion and reduces injury risk. Target calves, hip flexors, hamstrings, piriformis. Not effective as injury prevention in isolation.",
+    "tags": [
+      "mobility",
+      "flexibility",
+      "static_stretching",
+      "range_of_motion",
+      "post_run"
+    ],
+    "edges": [
+      {
+        "targetId": "re019",
+        "weight": 0.78
+      },
+      {
+        "targetId": "re011",
+        "weight": 0.77
+      }
+    ],
+    "positionX": -0.157,
+    "positionY": -5.868,
+    "positionZ": -1.213,
+    "color": "#9C27B0"
+  },
+  {
+    "id": "re017",
+    "topicCluster": "recovery",
+    "title": "Leg Elevation",
+    "description": "Elevating legs (15\u201320 min above heart level) post-long-run assists venous return and reduces swelling. Simple and effective; combine with hydration and light snack.",
+    "tags": [
+      "leg_elevation",
+      "venous_return",
+      "swelling",
+      "post_run",
+      "recovery"
+    ],
+    "edges": [
+      {
+        "targetId": "re012",
+        "weight": 0.77
+      },
+      {
+        "targetId": "re020",
+        "weight": 0.76
+      }
+    ],
+    "positionX": 0.836,
+    "positionY": -6.026,
+    "positionZ": 0.705,
+    "color": "#9C27B0"
+  },
+  {
+    "id": "re018",
+    "topicCluster": "recovery",
+    "title": "Training Diary and Recovery Patterns",
+    "description": "Tracking subjective recovery (1\u201310 scale), sleep hours, mood, and resting HR reveals personal recovery patterns. Enables data-driven training adjustments before fatigue accumulates.",
+    "tags": [
+      "training_diary",
+      "subjective_recovery",
+      "feel_score",
+      "monitoring",
+      "data_driven"
+    ],
+    "edges": [
+      {
+        "targetId": "re020",
+        "weight": 0.81
+      },
+      {
+        "targetId": "re013",
+        "weight": 0.77
+      }
+    ],
+    "positionX": -0.92,
+    "positionY": -6.184,
+    "positionZ": 0.038,
+    "color": "#9C27B0"
+  },
+  {
+    "id": "re019",
+    "topicCluster": "recovery",
+    "title": "Social Recovery",
+    "description": "Social connection reduces cortisol and perception of effort. Running clubs, shared long runs, and post-race celebrations contribute to sustainable training habits and psychological recovery.",
+    "tags": [
+      "social",
+      "cortisol",
+      "running_club",
+      "motivation",
+      "sustainability"
+    ],
+    "edges": [
+      {
+        "targetId": "re020",
+        "weight": 0.86
+      },
+      {
+        "targetId": "re016",
+        "weight": 0.78
+      }
+    ],
+    "positionX": 0.475,
+    "positionY": -6.342,
+    "positionZ": -0.473,
+    "color": "#9C27B0"
+  },
+  {
+    "id": "re020",
+    "topicCluster": "recovery",
+    "title": "Periodised Recovery",
+    "description": "Recovery must be built into the macro plan. Key recovery points: after goal races (2\u20134 weeks), after peak training phases, and at season transitions. Planned rest outperforms reactive rest.",
+    "tags": [
+      "periodised_recovery",
+      "macro_plan",
+      "season_transitions",
+      "planned_rest",
+      "goal_race"
+    ],
+    "edges": [
+      {
+        "targetId": "re019",
+        "weight": 0.86
+      },
+      {
+        "targetId": "re018",
+        "weight": 0.81
+      }
+    ],
+    "positionX": 0.0,
+    "positionY": -6.5,
+    "positionZ": 0.0,
+    "color": "#9C27B0"
+  },
+  {
+    "id": "ri001",
+    "topicCluster": "race_intelligence",
+    "title": "Marathon Pacing Strategy",
+    "description": "Even pacing within 2% produces best results at marathon. Negative split (second half 1\u20132 min faster) is achievable for well-trained athletes. Going out too fast by >10s/km is a primary failure mode.",
+    "tags": [
+      "marathon_pacing",
+      "even_pace",
+      "negative_split",
+      "race_execution"
+    ],
+    "edges": [
+      {
+        "targetId": "ri002",
+        "weight": 0.86
+      },
+      {
+        "targetId": "ri003",
+        "weight": 0.81
+      },
+      {
+        "targetId": "cm017",
+        "weight": 0.6
+      }
+    ],
+    "positionX": 4.33,
+    "positionY": 4.0,
+    "positionZ": 0.0,
+    "color": "#FFB300"
+  },
+  {
+    "id": "ri002",
+    "topicCluster": "race_intelligence",
+    "title": "Half Marathon Race Strategy",
+    "description": "Aim for even splits. First 5K should feel easy. Commit to race pace at 5K. Hold through 15K. Final 6K is where fitness shows. Average HR should reach 88\u201392% of max by 10K.",
+    "tags": [
+      "half_marathon",
+      "race_strategy",
+      "pacing",
+      "heart_rate",
+      "execution"
+    ],
+    "edges": [
+      {
+        "targetId": "ri001",
+        "weight": 0.86
+      },
+      {
+        "targetId": "ri005",
+        "weight": 0.78
+      }
+    ],
+    "positionX": 3.836,
+    "positionY": 3.842,
+    "positionZ": 0.453,
+    "color": "#FFB300"
+  },
+  {
+    "id": "ri003",
+    "topicCluster": "race_intelligence",
+    "title": "Course Reconnaissance",
+    "description": "Study elevation profile, turns, surface, and typical weather. Know exact fuelling station locations. Identify spectator points for psychological lifts. Walk the finish area if possible.",
+    "tags": [
+      "course_recon",
+      "elevation",
+      "fuelling_stations",
+      "race_preparation"
+    ],
+    "edges": [
+      {
+        "targetId": "ri001",
+        "weight": 0.81
+      },
+      {
+        "targetId": "ri008",
+        "weight": 0.77
+      }
+    ],
+    "positionX": 4.41,
+    "positionY": 3.684,
+    "positionZ": -0.917,
+    "color": "#FFB300"
+  },
+  {
+    "id": "ri004",
+    "topicCluster": "race_intelligence",
+    "title": "Race-Day Weather Adjustment",
+    "description": "Optimal marathon temp is 7\u201312\u00b0C. Adjust pace +30s/km per 5\u00b0C above 15\u00b0C. In heat, HR is a better guide than pace; switch to HR-controlled effort. Hydrate proactively.",
+    "tags": [
+      "weather",
+      "temperature",
+      "heat_adjustment",
+      "hr_pacing",
+      "race_day"
+    ],
+    "edges": [
+      {
+        "targetId": "ri009",
+        "weight": 0.77
+      },
+      {
+        "targetId": "ri001",
+        "weight": 0.76
+      },
+      {
+        "targetId": "nu005",
+        "weight": 0.6
+      }
+    ],
+    "positionX": 4.996,
+    "positionY": 3.526,
+    "positionZ": 0.868,
+    "color": "#FFB300"
+  },
+  {
+    "id": "ri005",
+    "topicCluster": "race_intelligence",
+    "title": "Fuelling During the Race",
+    "description": "Start fuelling at 30\u201345 min, before glycogen depletion begins. 40\u201360g carbs/hr for <4h finishers; 60\u201390g/hr for longer efforts. Take gels with water, never sports drink (too much sugar).",
+    "tags": [
+      "race_fuelling",
+      "gels",
+      "carbohydrates",
+      "gel_strategy",
+      "bonking"
+    ],
+    "edges": [
+      {
+        "targetId": "ri002",
+        "weight": 0.78
+      },
+      {
+        "targetId": "ri010",
+        "weight": 0.77
+      }
+    ],
+    "positionX": 3.126,
+    "positionY": 3.368,
+    "positionZ": -0.213,
+    "color": "#FFB300"
+  },
+  {
+    "id": "ri006",
+    "topicCluster": "race_intelligence",
+    "title": "Hitting the Wall",
+    "description": "Glycogen depletion ('bonking') at 30\u201335km. Legs turn heavy, pace slows dramatically. Prevented by adequate carb loading, correct race-day fuelling, and not going out too fast.",
+    "tags": [
+      "bonking",
+      "hitting_the_wall",
+      "glycogen_depletion",
+      "nutrition",
+      "pacing"
+    ],
+    "edges": [
+      {
+        "targetId": "ri011",
+        "weight": 0.77
+      },
+      {
+        "targetId": "ri003",
+        "weight": 0.77
+      }
+    ],
+    "positionX": 5.445,
+    "positionY": 3.211,
+    "positionZ": -0.709,
+    "color": "#FFB300"
+  },
+  {
+    "id": "ri007",
+    "topicCluster": "race_intelligence",
+    "title": "Race-Day Routine",
+    "description": "Wake 3\u20134h before start. Eat known pre-race meal. Arrive 90 min before gun. Warm-up (10\u201315 min easy jog + strides) for 5K and 10K; minimal warm-up for marathon.",
+    "tags": [
+      "race_day_routine",
+      "wake_time",
+      "warm_up",
+      "pre_race",
+      "logistics"
+    ],
+    "edges": [
+      {
+        "targetId": "ri012",
+        "weight": 0.77
+      },
+      {
+        "targetId": "ri002",
+        "weight": 0.76
+      }
+    ],
+    "positionX": 3.968,
+    "positionY": 3.053,
+    "positionZ": 1.347,
+    "color": "#FFB300"
+  },
+  {
+    "id": "ri008",
+    "topicCluster": "race_intelligence",
+    "title": "Seeding Yourself Correctly",
+    "description": "Starting in the correct corral prevents the first-km surge from forcing excessive early effort. Seed based on current fitness, not aspirational goal. Starting slow is forgivable; starting fast is not.",
+    "tags": [
+      "seeding",
+      "corrals",
+      "starting_position",
+      "race_strategy",
+      "pacing"
+    ],
+    "edges": [
+      {
+        "targetId": "ri013",
+        "weight": 0.77
+      },
+      {
+        "targetId": "ri003",
+        "weight": 0.77
+      }
+    ],
+    "positionX": 3.663,
+    "positionY": 2.895,
+    "positionZ": -1.284,
+    "color": "#FFB300"
+  },
+  {
+    "id": "ri009",
+    "topicCluster": "race_intelligence",
+    "title": "Running Tangents",
+    "description": "Always run the shortest legal line (tangents around corners). In a 42.2km marathon, running the wide line adds 200\u2013400m. Focus on inner edges of turns.",
+    "tags": [
+      "tangents",
+      "shortest_line",
+      "race_efficiency",
+      "distance",
+      "turns"
+    ],
+    "edges": [
+      {
+        "targetId": "ri014",
+        "weight": 0.77
+      },
+      {
+        "targetId": "ri004",
+        "weight": 0.77
+      }
+    ],
+    "positionX": 5.721,
+    "positionY": 2.737,
+    "positionZ": 0.508,
+    "color": "#FFB300"
+  },
+  {
+    "id": "ri010",
+    "topicCluster": "race_intelligence",
+    "title": "Drafting",
+    "description": "Running in the slipstream of another runner reduces air resistance by 5\u20137% at marathon pace. Legal in road races. Especially valuable in windy conditions. Requires maintaining pace of the group.",
+    "tags": [
+      "drafting",
+      "slipstream",
+      "wind_resistance",
+      "race_tactics",
+      "packing"
+    ],
+    "edges": [
+      {
+        "targetId": "ri005",
+        "weight": 0.77
+      },
+      {
+        "targetId": "ri015",
+        "weight": 0.77
+      }
+    ],
+    "positionX": 2.945,
+    "positionY": 2.579,
+    "positionZ": 0.572,
+    "color": "#FFB300"
+  },
+  {
+    "id": "ri011",
+    "topicCluster": "race_intelligence",
+    "title": "Post-Race Recovery Timeline",
+    "description": "Day 1\u20132: complete rest, aggressive nutrition. Week 1: walking only. Week 2: easy 20\u201330 min runs. Full training resumes after ~4 weeks for marathon. 'One easy day per race mile' is a useful guide.",
+    "tags": [
+      "post_race_recovery",
+      "marathon_recovery",
+      "return_to_training",
+      "rest"
+    ],
+    "edges": [
+      {
+        "targetId": "ri016",
+        "weight": 0.77
+      },
+      {
+        "targetId": "ri006",
+        "weight": 0.77
+      }
+    ],
+    "positionX": 4.965,
+    "positionY": 2.421,
+    "positionZ": -1.357,
+    "color": "#FFB300"
+  },
+  {
+    "id": "ri012",
+    "topicCluster": "race_intelligence",
+    "title": "Cramping in Races",
+    "description": "Multi-factorial: dehydration, electrolyte imbalance, neuromuscular fatigue, and going too fast. Prevention: adequate training, correct pacing, and electrolyte intake. In-race: slow down, stretch, take sodium.",
+    "tags": [
+      "cramping",
+      "race_cramps",
+      "electrolytes",
+      "dehydration",
+      "neuromuscular"
+    ],
+    "edges": [
+      {
+        "targetId": "ri007",
+        "weight": 0.77
+      },
+      {
+        "targetId": "ri017",
+        "weight": 0.77
+      }
+    ],
+    "positionX": 4.773,
+    "positionY": 2.263,
+    "positionZ": 1.413,
+    "color": "#FFB300"
+  },
+  {
+    "id": "ri013",
+    "topicCluster": "race_intelligence",
+    "title": "Hill Running Technique",
+    "description": "Uphill: shorten stride, maintain cadence, drive arms, lean forward slightly. Downhill: controlled lean, mid-foot landing, resist the urge to brake. Downhill 5K effort \u2248 flat 5K stress on quads.",
+    "tags": [
+      "hill_running",
+      "uphill",
+      "downhill",
+      "technique",
+      "effort_equivalence"
+    ],
+    "edges": [
+      {
+        "targetId": "ri008",
+        "weight": 0.77
+      },
+      {
+        "targetId": "ri018",
+        "weight": 0.77
+      }
+    ],
+    "positionX": 3.078,
+    "positionY": 2.105,
+    "positionZ": -0.726,
+    "color": "#FFB300"
+  },
+  {
+    "id": "ri014",
+    "topicCluster": "race_intelligence",
+    "title": "Psychological Checkpoints",
+    "description": "Break the race into segments (10K chunks for marathon). Focus on process (cadence, form, pacing) rather than outcome. Positive self-talk at 30K is a critical skill.",
+    "tags": [
+      "psychology",
+      "checkpoints",
+      "race_segmentation",
+      "self_talk",
+      "mental_toughness"
+    ],
+    "edges": [
+      {
+        "targetId": "ri009",
+        "weight": 0.77
+      },
+      {
+        "targetId": "ri019",
+        "weight": 0.76
+      }
+    ],
+    "positionX": 5.692,
+    "positionY": 1.947,
+    "positionZ": -0.299,
+    "color": "#FFB300"
+  },
+  {
+    "id": "ri015",
+    "topicCluster": "race_intelligence",
+    "title": "Pre-Race Taper Madness",
+    "description": "Common: phantom pains, low energy, doubt, weight gain (glycogen water). All are normal and temporary. Resist urge to do extra workouts. Trust the training.",
+    "tags": [
+      "taper_madness",
+      "taper",
+      "phantom_pains",
+      "doubt",
+      "trust_the_process"
+    ],
+    "edges": [
+      {
+        "targetId": "ri010",
+        "weight": 0.77
+      },
+      {
+        "targetId": "ri018",
+        "weight": 0.77
+      }
+    ],
+    "positionX": 3.57,
+    "positionY": 1.789,
+    "positionZ": 1.081,
+    "color": "#FFB300"
+  },
+  {
+    "id": "ri016",
+    "topicCluster": "race_intelligence",
+    "title": "Selecting a Goal Race",
+    "description": "Choose races with favourable courses, weather history, and timing within training cycle. Peak marathons (Berlin, Chicago, London) have flat courses and optimal October conditions.",
+    "tags": [
+      "race_selection",
+      "goal_race",
+      "flat_course",
+      "optimal_conditions",
+      "timing"
+    ],
+    "edges": [
+      {
+        "targetId": "ri019",
+        "weight": 0.78
+      },
+      {
+        "targetId": "ri011",
+        "weight": 0.77
+      }
+    ],
+    "positionX": 4.173,
+    "positionY": 1.632,
+    "positionZ": -1.213,
+    "color": "#FFB300"
+  },
+  {
+    "id": "ri017",
+    "topicCluster": "race_intelligence",
+    "title": "Qualifying Standards",
+    "description": "Boston, London, and other majors require time standards. Boston: age-graded qualification times, with rolling cutoffs typically 2\u20138 min faster than standard. Plan training cycles around qualification windows.",
+    "tags": [
+      "qualifying",
+      "boston_marathon",
+      "london_marathon",
+      "bq",
+      "time_standard"
+    ],
+    "edges": [
+      {
+        "targetId": "ri012",
+        "weight": 0.77
+      },
+      {
+        "targetId": "ri020",
+        "weight": 0.76
+      }
+    ],
+    "positionX": 5.166,
+    "positionY": 1.474,
+    "positionZ": 0.705,
+    "color": "#FFB300"
+  },
+  {
+    "id": "ri018",
+    "topicCluster": "race_intelligence",
+    "title": "Race-Week Preparation",
+    "description": "Final long run 2\u20133 weeks before race. Race week: short easy runs only, strides, carb loading Day 3\u20131. Avoid new foods, new gear, alcohol, and social obligations that disrupt sleep.",
+    "tags": [
+      "race_week",
+      "preparation",
+      "carb_loading",
+      "routine",
+      "sleep"
+    ],
+    "edges": [
+      {
+        "targetId": "ri020",
+        "weight": 0.81
+      },
+      {
+        "targetId": "ri013",
+        "weight": 0.77
+      }
+    ],
+    "positionX": 3.41,
+    "positionY": 1.316,
+    "positionZ": 0.038,
+    "color": "#FFB300"
+  },
+  {
+    "id": "ri019",
+    "topicCluster": "race_intelligence",
+    "title": "Pacers and Pace Groups",
+    "description": "Official pacers take cognitive load off the athlete. Choose the pacer group conservatively. If you feel strong at 30K, you can push away from the group; if struggling, let them go.",
+    "tags": [
+      "pacers",
+      "pace_groups",
+      "race_strategy",
+      "conservative",
+      "execution"
+    ],
+    "edges": [
+      {
+        "targetId": "ri020",
+        "weight": 0.86
+      },
+      {
+        "targetId": "ri016",
+        "weight": 0.78
+      }
+    ],
+    "positionX": 4.805,
+    "positionY": 1.158,
+    "positionZ": -0.473,
+    "color": "#FFB300"
+  },
+  {
+    "id": "ri020",
+    "topicCluster": "race_intelligence",
+    "title": "Age-Graded Performance",
+    "description": "Age-graded percentages allow fair comparison across ages. 70% is solid club level; 80% is competitive; 90%+ is elite. Useful for goal-setting as athletes age and for comparing progress.",
+    "tags": [
+      "age_grading",
+      "masters_running",
+      "performance_comparison",
+      "age_factors"
+    ],
+    "edges": [
+      {
+        "targetId": "ri019",
+        "weight": 0.86
+      },
+      {
+        "targetId": "ri018",
+        "weight": 0.81
+      }
+    ],
+    "positionX": 4.33,
+    "positionY": 1.0,
+    "positionZ": 0.0,
+    "color": "#FFB300"
+  },
+  {
+    "id": "cm001",
+    "topicCluster": "coaching_methodology",
+    "title": "Athlete-Centred Coaching",
+    "description": "Coaching that prioritises the athlete's goals, values, and voice. Coach as facilitator, not director. Leads to greater intrinsic motivation and long-term adherence.",
+    "tags": [
+      "athlete_centred",
+      "intrinsic_motivation",
+      "facilitation",
+      "goals",
+      "adherence"
+    ],
+    "edges": [
+      {
+        "targetId": "cm002",
+        "weight": 0.88
+      },
+      {
+        "targetId": "cm003",
+        "weight": 0.83
+      }
+    ],
+    "positionX": -4.33,
+    "positionY": 4.0,
+    "positionZ": 0.0,
+    "color": "#00BCD4"
+  },
+  {
+    "id": "cm002",
+    "topicCluster": "coaching_methodology",
+    "title": "SMART Goal Setting",
+    "description": "Goals should be Specific, Measurable, Achievable, Relevant, and Time-bound. Process goals (complete 90% of sessions) are more within the athlete's control than outcome goals (run 3:00).",
+    "tags": [
+      "smart_goals",
+      "goal_setting",
+      "process_goals",
+      "outcome_goals",
+      "motivation"
+    ],
+    "edges": [
+      {
+        "targetId": "cm001",
+        "weight": 0.88
+      },
+      {
+        "targetId": "cm005",
+        "weight": 0.81
+      },
+      {
+        "targetId": "mp005",
+        "weight": 0.7
+      }
+    ],
+    "positionX": -4.772,
+    "positionY": 3.875,
+    "positionZ": 0.405,
+    "color": "#00BCD4"
+  },
+  {
+    "id": "cm003",
+    "topicCluster": "coaching_methodology",
+    "title": "Behaviour Change Principles",
+    "description": "Fogg Behaviour Model: behaviour = motivation \u00d7 ability \u00d7 prompt. Reduce friction for desired behaviours (lay out kit the night before). Use if-then planning for consistency.",
+    "tags": [
+      "behaviour_change",
+      "fogg_model",
+      "habit_formation",
+      "friction_reduction",
+      "if_then"
+    ],
+    "edges": [
+      {
+        "targetId": "cm001",
+        "weight": 0.83
+      },
+      {
+        "targetId": "cm008",
+        "weight": 0.8
+      }
+    ],
+    "positionX": -4.258,
+    "positionY": 3.75,
+    "positionZ": -0.826,
+    "color": "#00BCD4"
+  },
+  {
+    "id": "cm004",
+    "topicCluster": "coaching_methodology",
+    "title": "Progressive Overload Principle",
+    "description": "Training load must increase over time to continue driving adaptation. Too little: stagnation. Too much: injury/overtraining. The art is finding the optimal incremental stress.",
+    "tags": [
+      "progressive_overload",
+      "adaptation",
+      "training_load",
+      "periodisation"
+    ],
+    "edges": [
+      {
+        "targetId": "cm009",
+        "weight": 0.8
+      },
+      {
+        "targetId": "cm001",
+        "weight": 0.79
+      }
+    ],
+    "positionX": -3.726,
+    "positionY": 3.625,
+    "positionZ": 0.787,
+    "color": "#00BCD4"
+  },
+  {
+    "id": "cm005",
+    "topicCluster": "coaching_methodology",
+    "title": "Specificity Principle",
+    "description": "Training adaptations are specific to the type of training performed. Marathon runners must run at marathon pace; speed work alone won't prepare for 42.2km.",
+    "tags": [
+      "specificity",
+      "race_specificity",
+      "training_type",
+      "adaptation",
+      "marathon_pace"
+    ],
+    "edges": [
+      {
+        "targetId": "cm002",
+        "weight": 0.81
+      },
+      {
+        "targetId": "cm010",
+        "weight": 0.8
+      }
+    ],
+    "positionX": -5.431,
+    "positionY": 3.5,
+    "positionZ": -0.195,
+    "color": "#00BCD4"
+  },
+  {
+    "id": "cm006",
+    "topicCluster": "coaching_methodology",
+    "title": "Individual Differences",
+    "description": "Two athletes with the same VDOT respond differently to training. Recovery rates, psychological profiles, life stress, and injury history all modulate the optimal training programme.",
+    "tags": [
+      "individual_differences",
+      "personalisation",
+      "recovery_rate",
+      "stress",
+      "injury_history"
+    ],
+    "edges": [
+      {
+        "targetId": "cm011",
+        "weight": 0.8
+      },
+      {
+        "targetId": "cm003",
+        "weight": 0.79
+      }
+    ],
+    "positionX": -3.302,
+    "positionY": 3.375,
+    "positionZ": -0.654,
+    "color": "#00BCD4"
+  },
+  {
+    "id": "cm007",
+    "topicCluster": "coaching_methodology",
+    "title": "Reversibility Principle",
+    "description": "Detraining begins within 2 weeks of inactivity. Aerobic adaptations are lost faster than strength. After illness or injury, volume and intensity must be rebuilt gradually.",
+    "tags": [
+      "reversibility",
+      "detraining",
+      "return_to_training",
+      "illness",
+      "injury"
+    ],
+    "edges": [
+      {
+        "targetId": "cm012",
+        "weight": 0.8
+      },
+      {
+        "targetId": "cm002",
+        "weight": 0.79
+      }
+    ],
+    "positionX": -4.667,
+    "positionY": 3.25,
+    "positionZ": 1.255,
+    "color": "#00BCD4"
+  },
+  {
+    "id": "cm008",
+    "topicCluster": "coaching_methodology",
+    "title": "Coaching Communication",
+    "description": "Clear, timely feedback. Ask before telling. Reflective listening. Avoid jargon. Celebrate process wins. Address performance dips with curiosity, not judgement.",
+    "tags": [
+      "communication",
+      "feedback",
+      "active_listening",
+      "athlete_relationship",
+      "curiosity"
+    ],
+    "edges": [
+      {
+        "targetId": "cm003",
+        "weight": 0.8
+      },
+      {
+        "targetId": "cm013",
+        "weight": 0.8
+      }
+    ],
+    "positionX": -4.958,
+    "positionY": 3.125,
+    "positionZ": -1.21,
+    "color": "#00BCD4"
+  },
+  {
+    "id": "cm009",
+    "topicCluster": "coaching_methodology",
+    "title": "Training Plan Periodisation",
+    "description": "Macro (annual), meso (4-week block), and micro (weekly) planning. Each mesocycle has a specific purpose: base, build, peak, recovery. Plans must be adapted, not blindly followed.",
+    "tags": [
+      "periodisation",
+      "annual_plan",
+      "mesocycle",
+      "microcycle",
+      "adaptation"
+    ],
+    "edges": [
+      {
+        "targetId": "cm004",
+        "weight": 0.8
+      },
+      {
+        "targetId": "cm014",
+        "weight": 0.79
+      }
+    ],
+    "positionX": -3.002,
+    "positionY": 3.0,
+    "positionZ": 0.485,
+    "color": "#00BCD4"
+  },
+  {
+    "id": "cm010",
+    "topicCluster": "coaching_methodology",
+    "title": "The Art of Backing Off",
+    "description": "Knowing when to reduce load is as important as knowing when to increase it. External stressors (work, travel, illness) reduce training tolerance. Life load + training load = total load.",
+    "tags": [
+      "backing_off",
+      "load_management",
+      "life_stress",
+      "total_load",
+      "flexibility"
+    ],
+    "edges": [
+      {
+        "targetId": "cm005",
+        "weight": 0.8
+      },
+      {
+        "targetId": "cm015",
+        "weight": 0.79
+      }
+    ],
+    "positionX": -5.672,
+    "positionY": 2.875,
+    "positionZ": 0.554,
+    "color": "#00BCD4"
+  },
+  {
+    "id": "cm011",
+    "topicCluster": "coaching_methodology",
+    "title": "Behavioural Pattern Recognition",
+    "description": "Identifying recurring patterns in an athlete's choices and responses: under-fuelling before long runs, sleeping less before key sessions, catastrophising after bad workouts.",
+    "tags": [
+      "pattern_recognition",
+      "behaviour",
+      "coaching",
+      "monitoring",
+      "awareness"
+    ],
+    "edges": [
+      {
+        "targetId": "cm006",
+        "weight": 0.8
+      },
+      {
+        "targetId": "cm016",
+        "weight": 0.79
+      },
+      {
+        "targetId": "mp002",
+        "weight": 0.6
+      }
+    ],
+    "positionX": -3.703,
+    "positionY": 2.75,
+    "positionZ": -1.34,
+    "color": "#00BCD4"
+  },
+  {
+    "id": "cm012",
+    "topicCluster": "coaching_methodology",
+    "title": "Feel Score Interpretation",
+    "description": "Subjective effort/feel ratings (1\u20135) are highly predictive of training quality and recovery state. A consistent pattern of 2s and 3s signals accumulated fatigue before objective markers appear.",
+    "tags": [
+      "feel_score",
+      "subjective_effort",
+      "rpe",
+      "fatigue",
+      "monitoring"
+    ],
+    "edges": [
+      {
+        "targetId": "cm007",
+        "weight": 0.8
+      },
+      {
+        "targetId": "cm017",
+        "weight": 0.79
+      },
+      {
+        "targetId": "re018",
+        "weight": 0.7
+      }
+    ],
+    "positionX": -3.883,
+    "positionY": 2.625,
+    "positionZ": 1.426,
+    "color": "#00BCD4"
+  },
+  {
+    "id": "cm013",
+    "topicCluster": "coaching_methodology",
+    "title": "Coaching the Whole Person",
+    "description": "Athletic performance is embedded in life context. Sleep quality, nutrition habits, stress levels, relationships, and work demands all interact with training. Elite coaching addresses all dimensions.",
+    "tags": [
+      "holistic_coaching",
+      "whole_person",
+      "life_context",
+      "mental_health",
+      "balance"
+    ],
+    "edges": [
+      {
+        "targetId": "cm018",
+        "weight": 0.8
+      },
+      {
+        "targetId": "cm008",
+        "weight": 0.8
+      }
+    ],
+    "positionX": -5.628,
+    "positionY": 2.5,
+    "positionZ": -0.752,
+    "color": "#00BCD4"
+  },
+  {
+    "id": "cm014",
+    "topicCluster": "coaching_methodology",
+    "title": "Long-Term Athlete Development",
+    "description": "Most recreational athletes peak performance at 5\u201310 years of consistent training. Annual progression of 5\u201310% in marathon time is typical. Avoid short-cut approaches that sacrifice health.",
+    "tags": [
+      "ltad",
+      "long_term_development",
+      "progression",
+      "consistent_training",
+      "marathon_improvement"
+    ],
+    "edges": [
+      {
+        "targetId": "cm019",
+        "weight": 0.8
+      },
+      {
+        "targetId": "cm009",
+        "weight": 0.79
+      }
+    ],
+    "positionX": -2.87,
+    "positionY": 2.375,
+    "positionZ": -0.321,
+    "color": "#00BCD4"
+  },
+  {
+    "id": "cm015",
+    "topicCluster": "coaching_methodology",
+    "title": "Evidence-Based Coaching",
+    "description": "Prioritise peer-reviewed research and large-scale observational data over anecdote. When evidence is absent, apply first principles and monitor the individual's response.",
+    "tags": [
+      "evidence_based",
+      "research",
+      "peer_reviewed",
+      "first_principles",
+      "science"
+    ],
+    "edges": [
+      {
+        "targetId": "cm020",
+        "weight": 0.8
+      },
+      {
+        "targetId": "cm010",
+        "weight": 0.79
+      }
+    ],
+    "positionX": -5.181,
+    "positionY": 2.25,
+    "positionZ": 1.21,
+    "color": "#00BCD4"
+  },
+  {
+    "id": "cm016",
+    "topicCluster": "coaching_methodology",
+    "title": "Intrinsic vs Extrinsic Motivation",
+    "description": "Intrinsic motivators (love of running, mastery, challenge) produce more sustainable behaviour than extrinsic (trophies, social approval). Build intrinsic motivation through competence and autonomy.",
+    "tags": [
+      "intrinsic_motivation",
+      "extrinsic_motivation",
+      "autonomy",
+      "mastery",
+      "sustainability"
+    ],
+    "edges": [
+      {
+        "targetId": "cm021",
+        "weight": 0.8
+      },
+      {
+        "targetId": "cm011",
+        "weight": 0.79
+      }
+    ],
+    "positionX": -4.517,
+    "positionY": 2.125,
+    "positionZ": -1.44,
+    "color": "#00BCD4"
+  },
+  {
+    "id": "cm017",
+    "topicCluster": "coaching_methodology",
+    "title": "Managing Expectations",
+    "description": "Most athletes overestimate short-term gains and underestimate long-term gains. Setting realistic race-day goals based on current fitness prevents demoralisation and pacing errors.",
+    "tags": [
+      "expectations",
+      "realistic_goals",
+      "race_day",
+      "demoralisation",
+      "pacing"
+    ],
+    "edges": [
+      {
+        "targetId": "cm022",
+        "weight": 0.8
+      },
+      {
+        "targetId": "cm012",
+        "weight": 0.79
+      }
+    ],
+    "positionX": -3.249,
+    "positionY": 2.0,
+    "positionZ": 0.911,
+    "color": "#00BCD4"
+  },
+  {
+    "id": "cm018",
+    "topicCluster": "coaching_methodology",
+    "title": "Feedback Loops in Coaching",
+    "description": "Fast feedback (daily feel score, HR data) enables real-time adjustments. Slow feedback (race results, quarterly VDOT tests) informs longer strategic decisions. Both are essential.",
+    "tags": [
+      "feedback_loops",
+      "real_time",
+      "adjustment",
+      "vdot_testing",
+      "race_results"
+    ],
+    "edges": [
+      {
+        "targetId": "cm023",
+        "weight": 0.8
+      },
+      {
+        "targetId": "cm013",
+        "weight": 0.8
+      }
+    ],
+    "positionX": -5.692,
+    "positionY": 1.875,
+    "positionZ": 0.056,
+    "color": "#00BCD4"
+  },
+  {
+    "id": "cm019",
+    "topicCluster": "coaching_methodology",
+    "title": "Coaching the Comeback",
+    "description": "Athletes returning from significant injury or time off have preserved aerobic memory but deconditioned musculoskeletal tissue. Run volume must lag behind cardiovascular capacity.",
+    "tags": [
+      "comeback",
+      "aerobic_memory",
+      "deconditioning",
+      "return_to_training",
+      "gradual"
+    ],
+    "edges": [
+      {
+        "targetId": "cm014",
+        "weight": 0.8
+      },
+      {
+        "targetId": "cm024",
+        "weight": 0.79
+      }
+    ],
+    "positionX": -3.409,
+    "positionY": 1.75,
+    "positionZ": -0.916,
+    "color": "#00BCD4"
+  },
+  {
+    "id": "cm020",
+    "topicCluster": "coaching_methodology",
+    "title": "Group vs Individual Training",
+    "description": "Group training enhances motivation and pushes pace. Individual training allows exact prescription. Both have a role: group for tempo, long runs, races; individual for easy days and precise interval work.",
+    "tags": [
+      "group_training",
+      "individual_training",
+      "motivation",
+      "pace",
+      "social"
+    ],
+    "edges": [
+      {
+        "targetId": "cm015",
+        "weight": 0.8
+      },
+      {
+        "targetId": "cm023",
+        "weight": 0.79
+      }
+    ],
+    "positionX": -4.386,
+    "positionY": 1.625,
+    "positionZ": 1.217,
+    "color": "#00BCD4"
+  },
+  {
+    "id": "cm021",
+    "topicCluster": "coaching_methodology",
+    "title": "Athlete Autonomy",
+    "description": "Athletes who understand the 'why' behind workouts show better adherence and adaptation. Explain the purpose of each session type. Involve athletes in goal-setting and plan adaptations.",
+    "tags": [
+      "autonomy",
+      "understanding",
+      "adherence",
+      "education",
+      "goal_setting"
+    ],
+    "edges": [
+      {
+        "targetId": "cm024",
+        "weight": 0.81
+      },
+      {
+        "targetId": "cm016",
+        "weight": 0.8
+      }
+    ],
+    "positionX": -5.046,
+    "positionY": 1.5,
+    "positionZ": -0.858,
+    "color": "#00BCD4"
+  },
+  {
+    "id": "cm022",
+    "topicCluster": "coaching_methodology",
+    "title": "Periodised Coaching Conversations",
+    "description": "Coaching conversations should mirror the training phase: motivational in base phase; tactical in build; confidence-building in taper; process-focused on race day; reflective in recovery.",
+    "tags": [
+      "coaching_conversation",
+      "phase_specific",
+      "motivation",
+      "tactics",
+      "confidence"
+    ],
+    "edges": [
+      {
+        "targetId": "cm017",
+        "weight": 0.8
+      },
+      {
+        "targetId": "cm025",
+        "weight": 0.79
+      }
+    ],
+    "positionX": -3.347,
+    "positionY": 1.375,
+    "positionZ": 0.132,
+    "color": "#00BCD4"
+  },
+  {
+    "id": "cm023",
+    "topicCluster": "coaching_methodology",
+    "title": "Training Monotony",
+    "description": "Variety in training (different surfaces, routes, session types) prevents psychological burnout and stimulates different physiological adaptations. Rigid adherence to one format leads to stagnation.",
+    "tags": [
+      "training_variety",
+      "monotony",
+      "burnout",
+      "surfaces",
+      "stimulation"
+    ],
+    "edges": [
+      {
+        "targetId": "cm025",
+        "weight": 0.83
+      },
+      {
+        "targetId": "cm018",
+        "weight": 0.8
+      }
+    ],
+    "positionX": -5.011,
+    "positionY": 1.25,
+    "positionZ": 0.474,
+    "color": "#00BCD4"
+  },
+  {
+    "id": "cm024",
+    "topicCluster": "coaching_methodology",
+    "title": "Transition Periods",
+    "description": "After a goal race, a 2\u20134 week unstructured transition period (run by feel, no targets) maintains fitness while restoring motivation. Essential before beginning the next macro cycle.",
+    "tags": [
+      "transition_period",
+      "post_race",
+      "unstructured",
+      "motivation_restoration",
+      "next_cycle"
+    ],
+    "edges": [
+      {
+        "targetId": "cm025",
+        "weight": 0.88
+      },
+      {
+        "targetId": "cm021",
+        "weight": 0.81
+      }
+    ],
+    "positionX": -4.198,
+    "positionY": 1.125,
+    "positionZ": -0.585,
+    "color": "#00BCD4"
+  },
+  {
+    "id": "cm025",
+    "topicCluster": "coaching_methodology",
+    "title": "Coaching Ethical Standards",
+    "description": "Confidentiality, do no harm, informed consent for all interventions, appropriate boundaries, and referral to specialists (dietitians, physios, psychologists) when outside coaching scope.",
+    "tags": [
+      "ethics",
+      "confidentiality",
+      "boundaries",
+      "referral",
+      "informed_consent"
+    ],
+    "edges": [
+      {
+        "targetId": "cm024",
+        "weight": 0.88
+      },
+      {
+        "targetId": "cm023",
+        "weight": 0.83
+      }
+    ],
+    "positionX": -4.33,
+    "positionY": 1.0,
+    "positionZ": 0.0,
+    "color": "#00BCD4"
+  },
+  {
+    "id": "mp001",
+    "topicCluster": "mental_performance",
+    "title": "Pre-Race Anxiety Management",
+    "description": "Moderate arousal improves performance (Yerkes-Dodson). Strategies: controlled breathing (box breathing, 4-7-8), visualisation, process focus, routine replication. Distinguish excitement from anxiety.",
+    "tags": [
+      "pre_race_anxiety",
+      "arousal",
+      "breathing",
+      "visualisation",
+      "routine"
+    ],
+    "edges": [
+      {
+        "targetId": "mp002",
+        "weight": 0.84
+      },
+      {
+        "targetId": "mp003",
+        "weight": 0.77
+      }
+    ],
+    "positionX": 0.0,
+    "positionY": 3.0,
+    "positionZ": 4.5,
+    "color": "#E91E63"
+  },
+  {
+    "id": "mp002",
+    "topicCluster": "mental_performance",
+    "title": "Self-Talk Strategies",
+    "description": "Instructional self-talk ('quick feet', 'tall spine') improves technical performance. Motivational self-talk ('you've got this') improves endurance performance. Negative self-talk doubles perceived effort.",
+    "tags": [
+      "self_talk",
+      "instructional",
+      "motivational",
+      "positive_self_talk",
+      "performance"
+    ],
+    "edges": [
+      {
+        "targetId": "mp001",
+        "weight": 0.84
+      },
+      {
+        "targetId": "mp005",
+        "weight": 0.75
+      }
+    ],
+    "positionX": -0.57,
+    "positionY": 2.786,
+    "positionZ": 5.022,
+    "color": "#E91E63"
+  },
+  {
+    "id": "mp003",
+    "topicCluster": "mental_performance",
+    "title": "Visualisation / Mental Rehearsal",
+    "description": "Mental rehearsal of race scenarios activates the same neural pathways as physical execution. Practice specific scenarios: overtaking at 35K, running through a bad patch, crossing the line.",
+    "tags": [
+      "visualisation",
+      "mental_rehearsal",
+      "neural",
+      "race_scenarios",
+      "imagery"
+    ],
+    "edges": [
+      {
+        "targetId": "mp001",
+        "weight": 0.77
+      },
+      {
+        "targetId": "mp006",
+        "weight": 0.74
+      },
+      {
+        "targetId": "ri014",
+        "weight": 0.8
+      }
+    ],
+    "positionX": 0.092,
+    "positionY": 2.571,
+    "positionZ": 3.454,
+    "color": "#E91E63"
+  },
+  {
+    "id": "mp004",
+    "topicCluster": "mental_performance",
+    "title": "Mindfulness in Endurance Sport",
+    "description": "Body-scan awareness during runs prevents dissociation and improves pacing by maintaining contact with physical signals. Mindful awareness of breath, cadence, and form reduces perceived effort.",
+    "tags": [
+      "mindfulness",
+      "body_scan",
+      "dissociation",
+      "pacing",
+      "awareness"
+    ],
+    "edges": [
+      {
+        "targetId": "mp009",
+        "weight": 0.73
+      },
+      {
+        "targetId": "mp007",
+        "weight": 0.72
+      }
+    ],
+    "positionX": 0.749,
+    "positionY": 2.357,
+    "positionZ": 5.477,
+    "color": "#E91E63"
+  },
+  {
+    "id": "mp005",
+    "topicCluster": "mental_performance",
+    "title": "Goal Orientation",
+    "description": "Task/mastery orientation (improve against own standard) produces greater resilience than ego/outcome orientation (beat others). Helps athletes maintain motivation during poor performances.",
+    "tags": [
+      "goal_orientation",
+      "mastery",
+      "ego",
+      "resilience",
+      "intrinsic"
+    ],
+    "edges": [
+      {
+        "targetId": "mp002",
+        "weight": 0.75
+      },
+      {
+        "targetId": "mp010",
+        "weight": 0.73
+      }
+    ],
+    "positionX": -1.335,
+    "positionY": 2.143,
+    "positionZ": 4.264,
+    "color": "#E91E63"
+  },
+  {
+    "id": "mp006",
+    "topicCluster": "mental_performance",
+    "title": "Psychological Periodisation",
+    "description": "Mental skills training should parallel physical training. Base phase: identity and values clarification. Build phase: race-specific mental skills. Taper: confidence building and race rehearsal.",
+    "tags": [
+      "psychological_periodisation",
+      "mental_skills",
+      "identity",
+      "confidence",
+      "rehearsal"
+    ],
+    "edges": [
+      {
+        "targetId": "mp003",
+        "weight": 0.74
+      },
+      {
+        "targetId": "mp011",
+        "weight": 0.73
+      }
+    ],
+    "positionX": 1.213,
+    "positionY": 1.929,
+    "positionZ": 3.728,
+    "color": "#E91E63"
+  },
+  {
+    "id": "mp007",
+    "topicCluster": "mental_performance",
+    "title": "Identity as a Runner",
+    "description": "Athletes who identify as 'a runner' (vs 'someone who runs') are more consistent. Identity-based habit formation ('this is who I am') outperforms motivation-based ('I want to') for adherence.",
+    "tags": [
+      "identity",
+      "habit_formation",
+      "adherence",
+      "consistency",
+      "who_i_am"
+    ],
+    "edges": [
+      {
+        "targetId": "mp012",
+        "weight": 0.73
+      },
+      {
+        "targetId": "mp004",
+        "weight": 0.72
+      },
+      {
+        "targetId": "cm001",
+        "weight": 0.7
+      }
+    ],
+    "positionX": -0.385,
+    "positionY": 1.714,
+    "positionZ": 5.934,
+    "color": "#E91E63"
+  },
+  {
+    "id": "mp008",
+    "topicCluster": "mental_performance",
+    "title": "Dealing with Bad Training Runs",
+    "description": "Single bad sessions are noise; patterns are signal. Catastrophising a bad run worsens the psychological impact. Treat each run as data. Attribution: effort within control, conditions outside.",
+    "tags": [
+      "bad_runs",
+      "catastrophising",
+      "attribution",
+      "data",
+      "consistency"
+    ],
+    "edges": [
+      {
+        "targetId": "mp003",
+        "weight": 0.73
+      },
+      {
+        "targetId": "mp013",
+        "weight": 0.73
+      }
+    ],
+    "positionX": -0.691,
+    "positionY": 1.5,
+    "positionZ": 3.169,
+    "color": "#E91E63"
+  },
+  {
+    "id": "mp009",
+    "topicCluster": "mental_performance",
+    "title": "Performance Anxiety in Racing",
+    "description": "Pre-race butterflies are normal and can be reframed as readiness. Excessive anxiety: breathing protocols, pre-race ritual, focus on process goals. Distinguish anxiety from excitement.",
+    "tags": [
+      "performance_anxiety",
+      "butterflies",
+      "reframing",
+      "ritual",
+      "process_focus"
+    ],
+    "edges": [
+      {
+        "targetId": "mp004",
+        "weight": 0.73
+      },
+      {
+        "targetId": "mp012",
+        "weight": 0.72
+      }
+    ],
+    "positionX": 1.395,
+    "positionY": 1.286,
+    "positionZ": 5.009,
+    "color": "#E91E63"
+  },
+  {
+    "id": "mp010",
+    "topicCluster": "mental_performance",
+    "title": "Overcoming the Wall Mentally",
+    "description": "At 30K, when glycogen drops, the urge to quit is partly psychological. Strategies: focus on next km only, use mantras ('relentless forward motion'), count strides to 100.",
+    "tags": [
+      "hitting_the_wall",
+      "mental_toughness",
+      "mantras",
+      "30km",
+      "focus"
+    ],
+    "edges": [
+      {
+        "targetId": "mp013",
+        "weight": 0.74
+      },
+      {
+        "targetId": "mp005",
+        "weight": 0.73
+      }
+    ],
+    "positionX": -1.329,
+    "positionY": 1.071,
+    "positionZ": 5.048,
+    "color": "#E91E63"
+  },
+  {
+    "id": "mp011",
+    "topicCluster": "mental_performance",
+    "title": "Post-Race Debrief",
+    "description": "Structured reflection (what went well, what to improve, what to maintain) within 24\u201348h of a race converts experience into coaching insight. Avoid emotional over-reaction in either direction.",
+    "tags": [
+      "post_race",
+      "debrief",
+      "reflection",
+      "coaching",
+      "insight"
+    ],
+    "edges": [
+      {
+        "targetId": "mp014",
+        "weight": 0.75
+      },
+      {
+        "targetId": "mp006",
+        "weight": 0.73
+      }
+    ],
+    "positionX": 0.574,
+    "positionY": 0.857,
+    "positionZ": 3.272,
+    "color": "#E91E63"
+  },
+  {
+    "id": "mp012",
+    "topicCluster": "mental_performance",
+    "title": "Resilience Building",
+    "description": "Resilience is built through exposure to difficulty within a training context. Include challenging sessions (long intervals in rain, hilly long runs) to build confidence in adversity.",
+    "tags": [
+      "resilience",
+      "adversity",
+      "challenging_sessions",
+      "confidence",
+      "mental_toughness"
+    ],
+    "edges": [
+      {
+        "targetId": "mp007",
+        "weight": 0.73
+      },
+      {
+        "targetId": "mp009",
+        "weight": 0.72
+      }
+    ],
+    "positionX": 0.368,
+    "positionY": 0.643,
+    "positionZ": 5.675,
+    "color": "#E91E63"
+  },
+  {
+    "id": "mp013",
+    "topicCluster": "mental_performance",
+    "title": "Intrinsic Reward Systems",
+    "description": "Celebrate process wins: consistency streaks, feel score improvement, personal records in training sessions. Intrinsic rewards sustain motivation better than external validation.",
+    "tags": [
+      "intrinsic_reward",
+      "process_wins",
+      "consistency",
+      "motivation",
+      "celebration"
+    ],
+    "edges": [
+      {
+        "targetId": "mp015",
+        "weight": 0.77
+      },
+      {
+        "targetId": "mp010",
+        "weight": 0.74
+      }
+    ],
+    "positionX": -0.908,
+    "positionY": 0.429,
+    "positionZ": 3.974,
+    "color": "#E91E63"
+  },
+  {
+    "id": "mp014",
+    "topicCluster": "mental_performance",
+    "title": "Burnout Recognition and Prevention",
+    "description": "Signs: loss of motivation, dread of training, irritability, declining performance despite adequate training. Prevention: recovery weeks, non-running activities, addressing root causes.",
+    "tags": [
+      "burnout",
+      "motivation",
+      "overtraining",
+      "recovery",
+      "root_cause"
+    ],
+    "edges": [
+      {
+        "targetId": "mp015",
+        "weight": 0.84
+      },
+      {
+        "targetId": "mp011",
+        "weight": 0.75
+      }
+    ],
+    "positionX": 0.755,
+    "positionY": 0.214,
+    "positionZ": 4.334,
+    "color": "#E91E63"
+  },
+  {
+    "id": "mp015",
+    "topicCluster": "mental_performance",
+    "title": "Fear of Failure and Racing",
+    "description": "Fear of failing to hit a goal time prevents athletes from racing boldly. Reframe: every race is practice for the next. Set confidence goals alongside performance goals.",
+    "tags": [
+      "fear_of_failure",
+      "bold_racing",
+      "reframing",
+      "confidence_goals",
+      "practice"
+    ],
+    "edges": [
+      {
+        "targetId": "mp014",
+        "weight": 0.84
+      },
+      {
+        "targetId": "mp013",
+        "weight": 0.77
+      }
+    ],
+    "positionX": 0.0,
+    "positionY": 0.0,
+    "positionZ": 4.5,
+    "color": "#E91E63"
+  },
+  {
+    "id": "bm001",
+    "topicCluster": "biomechanics",
+    "title": "Cadence Optimisation",
+    "description": "Optimal running cadence is individual but 170\u2013180 spm minimises overstriding for most runners. Increasing cadence by 5\u201310% reduces ground contact time and vertical oscillation.",
+    "tags": [
+      "cadence",
+      "steps_per_minute",
+      "overstriding",
+      "ground_contact",
+      "vertical_oscillation"
+    ],
+    "edges": [
+      {
+        "targetId": "bm002",
+        "weight": 0.84
+      },
+      {
+        "targetId": "bm003",
+        "weight": 0.77
+      },
+      {
+        "targetId": "ts011",
+        "weight": 0.7
+      }
+    ],
+    "positionX": 0.0,
+    "positionY": 3.0,
+    "positionZ": -4.5,
+    "color": "#3F51B5"
+  },
+  {
+    "id": "bm002",
+    "topicCluster": "biomechanics",
+    "title": "Foot Strike Pattern",
+    "description": "Forefoot, midfoot, and rearfoot striking are all viable. Overstriding with rearfoot strike increases injury risk. Mid/forefoot reduces braking force. Transition slowly if changing.",
+    "tags": [
+      "foot_strike",
+      "forefoot",
+      "midfoot",
+      "rearfoot",
+      "braking_force"
+    ],
+    "edges": [
+      {
+        "targetId": "bm001",
+        "weight": 0.84
+      },
+      {
+        "targetId": "bm005",
+        "weight": 0.75
+      }
+    ],
+    "positionX": -0.57,
+    "positionY": 2.786,
+    "positionZ": -3.978,
+    "color": "#3F51B5"
+  },
+  {
+    "id": "bm003",
+    "topicCluster": "biomechanics",
+    "title": "Vertical Oscillation",
+    "description": "Bouncing wastes energy. Optimal vertical oscillation is 6\u201313cm. Reduce by increasing cadence, shortening stride slightly, and focusing on 'quiet' landings.",
+    "tags": [
+      "vertical_oscillation",
+      "bounce",
+      "energy_waste",
+      "cadence",
+      "quiet_landing"
+    ],
+    "edges": [
+      {
+        "targetId": "bm001",
+        "weight": 0.77
+      },
+      {
+        "targetId": "bm006",
+        "weight": 0.74
+      }
+    ],
+    "positionX": 0.092,
+    "positionY": 2.571,
+    "positionZ": -5.546,
+    "color": "#3F51B5"
+  },
+  {
+    "id": "bm004",
+    "topicCluster": "biomechanics",
+    "title": "Running Posture",
+    "description": "Slight forward lean from ankles (not waist), tall spine, relaxed shoulders, eyes focused 20m ahead. Excessive forward lean shifts load to lower back; backward lean increases braking.",
+    "tags": [
+      "running_posture",
+      "forward_lean",
+      "spine",
+      "shoulders",
+      "head_position"
+    ],
+    "edges": [
+      {
+        "targetId": "bm009",
+        "weight": 0.73
+      },
+      {
+        "targetId": "bm007",
+        "weight": 0.72
+      }
+    ],
+    "positionX": 0.749,
+    "positionY": 2.357,
+    "positionZ": -3.523,
+    "color": "#3F51B5"
+  },
+  {
+    "id": "bm005",
+    "topicCluster": "biomechanics",
+    "title": "Arm Swing Mechanics",
+    "description": "Arms should swing forward-back (not across the body), 90\u00b0 elbow angle, relaxed hands. Efficient arm swing counterbalances leg movement and contributes 10\u201315% of forward propulsion.",
+    "tags": [
+      "arm_swing",
+      "elbow_angle",
+      "relaxed_hands",
+      "rotation",
+      "propulsion"
+    ],
+    "edges": [
+      {
+        "targetId": "bm002",
+        "weight": 0.75
+      },
+      {
+        "targetId": "bm010",
+        "weight": 0.73
+      }
+    ],
+    "positionX": -1.335,
+    "positionY": 2.143,
+    "positionZ": -4.736,
+    "color": "#3F51B5"
+  },
+  {
+    "id": "bm006",
+    "topicCluster": "biomechanics",
+    "title": "Hip Extension",
+    "description": "Full hip extension at push-off is critical for efficient force application. Restricted hip extension (from tight hip flexors) forces compensation in lower back and opposite hip.",
+    "tags": [
+      "hip_extension",
+      "push_off",
+      "hip_flexors",
+      "compensation",
+      "efficiency"
+    ],
+    "edges": [
+      {
+        "targetId": "bm003",
+        "weight": 0.74
+      },
+      {
+        "targetId": "bm011",
+        "weight": 0.73
+      }
+    ],
+    "positionX": 1.213,
+    "positionY": 1.929,
+    "positionZ": -5.272,
+    "color": "#3F51B5"
+  },
+  {
+    "id": "bm007",
+    "topicCluster": "biomechanics",
+    "title": "Ground Contact Time",
+    "description": "Elite runners have <200ms ground contact time; recreational runners 220\u2013280ms. Shorter contact = less energy loss. Improved by strength, stiffness of the Achilles-calf complex, and cadence.",
+    "tags": [
+      "ground_contact_time",
+      "elite",
+      "stiffness",
+      "achilles",
+      "cadence"
+    ],
+    "edges": [
+      {
+        "targetId": "bm012",
+        "weight": 0.73
+      },
+      {
+        "targetId": "bm004",
+        "weight": 0.72
+      }
+    ],
+    "positionX": -0.385,
+    "positionY": 1.714,
+    "positionZ": -3.066,
+    "color": "#3F51B5"
+  },
+  {
+    "id": "bm008",
+    "topicCluster": "biomechanics",
+    "title": "Running Shoes and Performance",
+    "description": "Stack height, drop, and flexibility affect force distribution. Higher drop shoes favour rearfoot strike; zero-drop favour midfoot/forefoot. Carbon-plated shoes improve running economy by 2\u20134% at pace.",
+    "tags": [
+      "running_shoes",
+      "stack_height",
+      "drop",
+      "carbon_plate",
+      "running_economy"
+    ],
+    "edges": [
+      {
+        "targetId": "bm003",
+        "weight": 0.73
+      },
+      {
+        "targetId": "bm013",
+        "weight": 0.73
+      },
+      {
+        "targetId": "ts023",
+        "weight": 0.7
+      }
+    ],
+    "positionX": -0.691,
+    "positionY": 1.5,
+    "positionZ": -5.831,
+    "color": "#3F51B5"
+  },
+  {
+    "id": "bm009",
+    "topicCluster": "biomechanics",
+    "title": "Pelvic Stability",
+    "description": "Trendelenburg sign (hip drop on single-leg stance) is a marker of poor hip abductor strength. Directly linked to ITB syndrome, runner's knee, and lower back pain. Single-leg exercises address this.",
+    "tags": [
+      "pelvic_stability",
+      "hip_drop",
+      "trendelenburg",
+      "hip_abductor",
+      "single_leg"
+    ],
+    "edges": [
+      {
+        "targetId": "bm004",
+        "weight": 0.73
+      },
+      {
+        "targetId": "bm012",
+        "weight": 0.72
+      }
+    ],
+    "positionX": 1.395,
+    "positionY": 1.286,
+    "positionZ": -3.991,
+    "color": "#3F51B5"
+  },
+  {
+    "id": "bm010",
+    "topicCluster": "biomechanics",
+    "title": "Stride Length Determinants",
+    "description": "Stride length is determined by flexibility, strength, and coordination \u2014 not effort alone. Optimal stride for marathon is ~1.5\u20131.8m. Too short = inefficient; too long = overstriding.",
+    "tags": [
+      "stride_length",
+      "flexibility",
+      "strength",
+      "coordination",
+      "overstriding"
+    ],
+    "edges": [
+      {
+        "targetId": "bm013",
+        "weight": 0.74
+      },
+      {
+        "targetId": "bm005",
+        "weight": 0.73
+      }
+    ],
+    "positionX": -1.329,
+    "positionY": 1.071,
+    "positionZ": -3.952,
+    "color": "#3F51B5"
+  },
+  {
+    "id": "bm011",
+    "topicCluster": "biomechanics",
+    "title": "Running Drills",
+    "description": "High knees, butt kicks, A-skips, B-skips, carioca, ankling. Each isolates a phase of the gait cycle. Best performed at the start of a session 2\u20133\u00d7/week after a warm-up.",
+    "tags": [
+      "running_drills",
+      "high_knees",
+      "a_skips",
+      "b_skips",
+      "gait_cycle"
+    ],
+    "edges": [
+      {
+        "targetId": "bm014",
+        "weight": 0.75
+      },
+      {
+        "targetId": "bm006",
+        "weight": 0.73
+      }
+    ],
+    "positionX": 0.574,
+    "positionY": 0.857,
+    "positionZ": -5.728,
+    "color": "#3F51B5"
+  },
+  {
+    "id": "bm012",
+    "topicCluster": "biomechanics",
+    "title": "Plyometrics for Runners",
+    "description": "Box jumps, bounding, single-leg hops develop elastic energy storage in tendons and muscle-tendon units. 2\u00d7/week; avoid within 48h of key running sessions. Improves running economy by 5\u20138%.",
+    "tags": [
+      "plyometrics",
+      "elastic_energy",
+      "tendons",
+      "bounding",
+      "running_economy"
+    ],
+    "edges": [
+      {
+        "targetId": "bm007",
+        "weight": 0.73
+      },
+      {
+        "targetId": "bm009",
+        "weight": 0.72
+      }
+    ],
+    "positionX": 0.368,
+    "positionY": 0.643,
+    "positionZ": -3.325,
+    "color": "#3F51B5"
+  },
+  {
+    "id": "bm013",
+    "topicCluster": "biomechanics",
+    "title": "Heel Drop and Injury Risk",
+    "description": "High heel drop (>10mm) may increase overstriding. Transitioning to lower drop should be done over 3\u20136 months. Achilles and calf must adapt progressively.",
+    "tags": [
+      "heel_drop",
+      "transition_shoes",
+      "overstriding",
+      "achilles",
+      "gradual_transition"
+    ],
+    "edges": [
+      {
+        "targetId": "bm015",
+        "weight": 0.77
+      },
+      {
+        "targetId": "bm010",
+        "weight": 0.74
+      }
+    ],
+    "positionX": -0.908,
+    "positionY": 0.429,
+    "positionZ": -5.026,
+    "color": "#3F51B5"
+  },
+  {
+    "id": "bm014",
+    "topicCluster": "biomechanics",
+    "title": "Breathing Mechanics",
+    "description": "Rhythmic breathing (3:2 inhale/exhale pattern) coordinates with footfall. Diaphragmatic breathing is more efficient than chest breathing. Breathing rate naturally increases with intensity.",
+    "tags": [
+      "breathing",
+      "rhythmic_breathing",
+      "diaphragmatic",
+      "3_2_pattern",
+      "efficiency"
+    ],
+    "edges": [
+      {
+        "targetId": "bm015",
+        "weight": 0.84
+      },
+      {
+        "targetId": "bm011",
+        "weight": 0.75
+      }
+    ],
+    "positionX": 0.755,
+    "positionY": 0.214,
+    "positionZ": -4.666,
+    "color": "#3F51B5"
+  },
+  {
+    "id": "bm015",
+    "topicCluster": "biomechanics",
+    "title": "Running in Fatigued State",
+    "description": "Biomechanics deteriorate significantly after 30K of marathon. Hip drop, forward trunk lean, and overstriding increase. Strength training reduces this deterioration. Practice marathon-pace running at end of long runs.",
+    "tags": [
+      "fatigue",
+      "biomechanical_deterioration",
+      "late_race",
+      "strength",
+      "marathon"
+    ],
+    "edges": [
+      {
+        "targetId": "bm014",
+        "weight": 0.84
+      },
+      {
+        "targetId": "bm013",
+        "weight": 0.77
+      }
+    ],
+    "positionX": 0.0,
+    "positionY": 0.0,
+    "positionZ": -4.5,
+    "color": "#3F51B5"
+  }
+]
