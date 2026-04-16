@@ -1,0 +1,35 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ── Default: deny all ────────────────────────────────────────────────────
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // ── User data: readable by own uid only ────────────────────────────────
+    // Note: all writes go through Admin SDK (server-side), which bypasses rules.
+    // Client reads are provided here for future offline/PWA support.
+    match /users/{uid}/{document=**} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+    }
+
+    // ── Master knowledge graph: readable by any authenticated user ──────────
+    match /masterGraph/{nodeId} {
+      allow read: if request.auth != null;
+    }
+
+    // ── Audit log: readable by admins only ────────────────────────────────
+    // Admin status is stored as a custom claim on the Firebase Auth token.
+    match /auditLog/{eventId} {
+      allow read: if request.auth != null && request.auth.token.admin == true;
+    }
+
+    // ── Global config: readable by authenticated users ────────────────────
+    // Allows the client to read the kill switch state for UI indication.
+    match /globalConfig/{configId} {
+      allow read: if request.auth != null;
+    }
+
+  }
+}

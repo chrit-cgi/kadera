@@ -133,13 +133,27 @@ You **MUST** consider the user input before proceeding (if not empty).
    - Validation rules from requirements
    - State transitions if applicable
 
-2. **Define interface contracts** (if project has external interfaces) → `/contracts/`:
+2. **devDependencies type-package audit** → record in `plan.md`:
+   - For each runtime dependency in the tech stack, determine whether it ships its own types (`"types"` field in its `package.json`) or requires a separate `@types/<pkg>`.
+   - For CDN-loaded libraries (not bundled), record the `@types/<pkg>` devDependency explicitly — the runtime module being absent from the bundle does not eliminate the need for types.
+   - For framework packages with mandatory companion type packages (e.g. React → `@types/react`, React DOM → `@types/react-dom`), list them explicitly in the plan.
+   - Write the complete intended `devDependencies` block to the plan. Do not leave type packages as a task for the implementer to discover at build time.
+
+3. **Define interface contracts** (if project has external interfaces) → `/contracts/`:
    - Identify what interfaces the project exposes to users or other systems
    - Document the contract format appropriate for the project type
    - Examples: public APIs for libraries, command schemas for CLI tools, endpoints for web services, grammars for parsers, UI contracts for applications
    - Skip if project is purely internal (build scripts, one-off tools, etc.)
 
-3. **Agent context update**:
+4. **Internal utility contracts** → `/contracts/internal.md` (if shared server-side utilities exist):
+   - For each utility function called from more than one API handler (auth verification, audit logging, rate limiting, AI client wrappers), document its exact TypeScript signature, argument shape, and error-throw contract.
+   - This is distinct from HTTP API contracts. Specifically:
+     - Auth helpers: the exact return type of `verifyAuth` including every field (uid, email, displayName, tier, isAdmin, etc.)
+     - Audit helpers: the exact shape of the event parameter, not just that "audit logging exists"
+     - Any shared helper whose signature differs from what callers might naively guess
+   - When a subsequent phase references a type defined in an earlier phase (e.g. a screen rendering `MasterNode`), the plan MUST quote the actual field names from `data-model.md` — not paraphrase them. Paraphrasing ("display the node's label") introduces silent mismatches with the real field names (`title`).
+
+5. **Agent context update**:
    - Run `.specify/scripts/bash/update-agent-context.sh claude`
    - These scripts detect which AI agent is in use
    - Update the appropriate agent-specific context file
