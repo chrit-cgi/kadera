@@ -39,10 +39,11 @@ self.addEventListener('fetch', (event) => {
   const { request } = event
   const url = new URL(request.url)
 
-  // Always bypass cache for API requests
-  if (url.pathname.startsWith('/api/')) {
-    return // Let browser handle normally
-  }
+  // Only handle same-origin requests — let cross-origin requests (CDNs, Google APIs) pass through unmodified
+  if (url.origin !== self.location.origin) return
+
+  // Always bypass cache for API requests and non-GET requests
+  if (url.pathname.startsWith('/api/') || request.method !== 'GET') return
 
   // For navigation requests (HTML), serve the cached shell
   if (request.mode === 'navigate') {
@@ -54,13 +55,12 @@ self.addEventListener('fetch', (event) => {
     return
   }
 
-  // For JS/CSS/image assets: try cache first, then network
+  // For same-origin JS/CSS/image assets: try cache first, then network
   event.respondWith(
     caches.match(request).then((cached) => {
       if (cached) return cached
       return fetch(request).then((response) => {
-        // Cache successful responses for static assets
-        if (response.ok && !url.pathname.startsWith('/api/')) {
+        if (response.ok) {
           const clone = response.clone()
           caches.open(CACHE_NAME).then((cache) => cache.put(request, clone))
         }
