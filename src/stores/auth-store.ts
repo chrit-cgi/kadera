@@ -54,6 +54,10 @@ export const useAuthStore = create<AuthState>((set) => ({
             headers: { Authorization: `Bearer ${token}` },
           })
           console.log('[auth] /api/account status:', res.status)
+          if (!res.ok) {
+            const body = await res.text()
+            console.error('[auth] /api/account error body:', body)
+          }
 
           if (res.ok) {
             const data = (await res.json()) as {
