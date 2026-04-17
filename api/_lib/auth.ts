@@ -43,7 +43,6 @@ export async function verifyAuth(req: IncomingMessage): Promise<VerifiedUser> {
   if (isBypassAllowed()) return { ...DEV_STUB, displayName: 'Dev User', isAdmin: true }
 
   const token = extractBearerToken(req)
-  console.log('[auth] token present:', !!token, 'headers:', JSON.stringify(Object.keys((req as IncomingMessage & { headers: Record<string, unknown> }).headers)))
 
   if (!token) {
     await writeAuditLog({
@@ -79,7 +78,6 @@ export async function verifyAuth(req: IncomingMessage): Promise<VerifiedUser> {
       isAdmin,
     }
   } catch (err) {
-    console.error('[auth] verifyIdToken failed:', err)
     await writeAuditLog({
       eventType: 'auth_failure',
       timestamp: new Date().toISOString(),
