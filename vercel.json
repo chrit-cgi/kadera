@@ -5,6 +5,8 @@
     }
   },
   "rewrites": [
+    { "source": "/api/admin/:path*", "destination": "/api/admin" },
+    { "source": "/api/account/:path*", "destination": "/api/account" },
     {
       "source": "/((?!api/).*)",
       "destination": "/index.html"
