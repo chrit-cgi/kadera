@@ -77,7 +77,8 @@ export async function verifyAuth(req: IncomingMessage): Promise<VerifiedUser> {
       tier,
       isAdmin,
     }
-  } catch {
+  } catch (err) {
+    console.error('[auth] verifyIdToken failed:', err)
     await writeAuditLog({
       eventType: 'auth_failure',
       timestamp: new Date().toISOString(),
