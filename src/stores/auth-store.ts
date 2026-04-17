@@ -49,6 +49,7 @@ export const useAuthStore = create<AuthState>((set) => ({
       }
 
       onAuthStateChanged(auth, async (firebaseUser) => {
+        console.log('[auth] onAuthStateChanged user:', firebaseUser?.email ?? null)
         if (!firebaseUser) {
           set({ user: null, isAdmin: false, isLoading: false })
           return
