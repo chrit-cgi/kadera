@@ -62,8 +62,8 @@ export async function verifyAuth(req: IncomingMessage): Promise<VerifiedUser> {
   }
 
   try {
+    const db = getDb() // ensures Firebase Admin is initialized before getAuth()
     const decoded = await getAuth().verifyIdToken(token)
-    const db = getDb()
     const [userDoc, adminDoc] = await Promise.all([
       db.collection('users').doc(decoded.uid).get(),
       db.collection('admins').doc(decoded.email ?? '').get(),
