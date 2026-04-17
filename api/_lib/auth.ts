@@ -13,11 +13,13 @@ const DEV_STUB = {
 }
 
 function isBypassAllowed(): boolean {
-  // Hard-block bypass in production — no exceptions
-  if (process.env.VERCEL_ENV === 'production') {
-    throw new Error('[auth] DEV_BYPASS_AUTH is not allowed in production')
+  if (process.env.DEV_BYPASS_AUTH === 'true') {
+    if (process.env.VERCEL_ENV === 'production') {
+      throw new Error('[auth] DEV_BYPASS_AUTH is not allowed in production')
+    }
+    return true
   }
-  return process.env.DEV_BYPASS_AUTH === 'true'
+  return false
 }
 
 // ── Token extraction ──────────────────────────────────────────────────────────
