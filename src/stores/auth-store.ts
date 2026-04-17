@@ -36,8 +36,15 @@ export const useAuthStore = create<AuthState>((set) => ({
     }
 
     // Lazy-import Firebase to avoid loading it in bypass mode
-    import('firebase/auth').then(({ getAuth, onAuthStateChanged }) => {
+    import('firebase/auth').then(async ({ getAuth, onAuthStateChanged, getRedirectResult }) => {
       const auth = getAuth()
+
+      // Handle redirect result from signInWithRedirect (runs on page load after redirect)
+      try {
+        await getRedirectResult(auth)
+      } catch {
+        // Redirect result errors are non-fatal; onAuthStateChanged handles the state
+      }
 
       onAuthStateChanged(auth, async (firebaseUser) => {
         if (!firebaseUser) {
@@ -83,11 +90,11 @@ export const useAuthStore = create<AuthState>((set) => ({
       return
     }
 
-    const { getAuth, GoogleAuthProvider, signInWithPopup } = await import('firebase/auth')
+    const { getAuth, GoogleAuthProvider, signInWithRedirect } = await import('firebase/auth')
     const auth = getAuth()
     const provider = new GoogleAuthProvider()
-    await signInWithPopup(auth, provider)
-    // onAuthStateChanged above will update the store
+    await signInWithRedirect(auth, provider)
+    // Page will redirect to Google, then back — getRedirectResult handles the result
   },
 
   async signOut() {
