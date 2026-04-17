@@ -28,8 +28,9 @@ export default async function handler(req: Req, res: ServerResponse) {
   try {
     user = await verifyAuth(req)
   } catch (e) {
-    const err = e as { statusCode?: number; message?: string }
-    return send(res, err.statusCode ?? 401, { error: err.message ?? 'Unauthorized' })
+    const err = e as { statusCode?: number; message?: string; cause?: unknown }
+    console.error('[account] auth error:', e)
+    return send(res, err.statusCode ?? 401, { error: err.message ?? 'Unauthorized', debug: String(e) })
   }
 
   const db = getDb()
