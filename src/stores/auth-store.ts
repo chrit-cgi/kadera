@@ -41,9 +41,11 @@ export const useAuthStore = create<AuthState>((set) => ({
 
       // Handle redirect result from signInWithRedirect (runs on page load after redirect)
       try {
-        await getRedirectResult(auth)
-      } catch {
-        // Redirect result errors are non-fatal; onAuthStateChanged handles the state
+        const result = await getRedirectResult(auth)
+        if (result) console.log('[auth] redirect result user:', result.user.email)
+        else console.log('[auth] no redirect result')
+      } catch (err) {
+        console.error('[auth] getRedirectResult error:', err)
       }
 
       onAuthStateChanged(auth, async (firebaseUser) => {
