@@ -39,15 +39,6 @@ export const useAuthStore = create<AuthState>((set) => ({
     import('firebase/auth').then(async ({ getAuth, onAuthStateChanged, getRedirectResult }) => {
       const auth = getAuth()
 
-      // Handle redirect result from signInWithRedirect (runs on page load after redirect)
-      try {
-        const result = await getRedirectResult(auth)
-        if (result) console.log('[auth] redirect result user:', result.user.email)
-        else console.log('[auth] no redirect result')
-      } catch (err) {
-        console.error('[auth] getRedirectResult error:', err)
-      }
-
       onAuthStateChanged(auth, async (firebaseUser) => {
         console.log('[auth] onAuthStateChanged user:', firebaseUser?.email ?? null)
         if (!firebaseUser) {
@@ -58,9 +49,11 @@ export const useAuthStore = create<AuthState>((set) => ({
         // Fetch tier + admin status from the backend
         try {
           const token = await firebaseUser.getIdToken()
+          console.log('[auth] token length:', token.length)
           const res = await fetch('/api/account', {
             headers: { Authorization: `Bearer ${token}` },
           })
+          console.log('[auth] /api/account status:', res.status)
 
           if (res.ok) {
             const data = (await res.json()) as {
@@ -93,11 +86,11 @@ export const useAuthStore = create<AuthState>((set) => ({
       return
     }
 
-    const { getAuth, GoogleAuthProvider, signInWithRedirect } = await import('firebase/auth')
+    const { getAuth, GoogleAuthProvider, signInWithPopup } = await import('firebase/auth')
     const auth = getAuth()
     const provider = new GoogleAuthProvider()
-    await signInWithRedirect(auth, provider)
-    // Page will redirect to Google, then back — getRedirectResult handles the result
+    await signInWithPopup(auth, provider)
+    // onAuthStateChanged above will update the store
   },
 
   async signOut() {
