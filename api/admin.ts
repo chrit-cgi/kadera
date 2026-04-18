@@ -1,39 +1,35 @@
 /**
- * api/admin.ts — Admin panel Vercel function (router)
+ * api/admin.ts — Admin panel Vercel function
  *
- * Routes:
- *   GET  /api/admin/dashboard
- *   GET  /api/admin/invites
- *   POST /api/admin/invites
- *   PATCH /api/admin/invites/:email
- *   GET  /api/admin/users
- *   PATCH /api/admin/users/:uid
- *   PATCH /api/admin/settings
- *
- * All routes require verifyAdmin().
+ * All routes use query params to avoid Vercel sub-path routing issues:
+ *   GET  /api/admin?resource=dashboard
+ *   GET  /api/admin?resource=invites
+ *   POST /api/admin?resource=invites
+ *   PATCH /api/admin?resource=invites&email=:email
+ *   GET  /api/admin?resource=users
+ *   PATCH /api/admin?resource=users&uid=:uid
+ *   PATCH /api/admin?resource=settings
  */
 import type { IncomingMessage, ServerResponse } from 'http'
-import { verifyAdmin } from '../_lib/auth.js'
-import { getDb } from '../_lib/firestore.js'
-import { writeAuditLog } from '../_lib/audit.js'
-import { FieldValue } from 'firebase-admin/firestore'
+import { verifyAdmin } from './_lib/auth.js'
+import { getDb } from './_lib/firestore.js'
+import { writeAuditLog } from './_lib/audit.js'
 
-type Req = IncomingMessage & { body?: Record<string, unknown>; query?: Record<string, string> }
-type Res = ServerResponse & { json?: (data: unknown) => void }
+type Req = IncomingMessage & { body?: Record<string, unknown> }
 
 function send(res: ServerResponse, status: number, data: unknown) {
-  const body = JSON.stringify(data)
   res.writeHead(status, { 'Content-Type': 'application/json' })
-  res.end(body)
+  res.end(JSON.stringify(data))
 }
 
-function pathSegments(url: string): string[] {
-  return url.replace(/\?.*$/, '').split('/').filter(Boolean)
+function parseQuery(url: string): Record<string, string> {
+  const qs = url.split('?')[1] ?? ''
+  return Object.fromEntries(new URLSearchParams(qs).entries())
 }
 
 // ── Dashboard ─────────────────────────────────────────────────────────────────
 
-async function handleDashboard(req: Req, res: ServerResponse, uid: string) {
+async function handleDashboard(req: Req, res: ServerResponse) {
   if (req.method !== 'GET') return send(res, 405, { error: 'Method not allowed' })
 
   const db = getDb()
@@ -49,7 +45,6 @@ async function handleDashboard(req: Req, res: ServerResponse, uid: string) {
   const config = configSnap.data() ?? {}
   const todayCost = todayCostSnap.data() ?? {}
 
-  // Monthly cost: sum all costs/{YYYY-MM-*} docs
   const monthSnaps = await db
     .collection('costs')
     .where('date', '>=', `${thisMonth}-01`)
@@ -61,7 +56,6 @@ async function handleDashboard(req: Req, res: ServerResponse, uid: string) {
     0,
   )
 
-  // Active today (lastLoginAt >= today 00:00 UTC)
   const todayStart = new Date(`${today}T00:00:00Z`)
   const activeTodaySnap = await db
     .collection('users')
@@ -75,7 +69,7 @@ async function handleDashboard(req: Req, res: ServerResponse, uid: string) {
     .limit(10)
     .get()
 
-  send(res, 200, {
+  return send(res, 200, {
     userCount: usersCount.data().count,
     activeToday: activeTodaySnap.data().count,
     dailyCostUSD: todayCost.totalCostUSD ?? 0,
@@ -92,14 +86,11 @@ async function handleInvites(req: Req, res: ServerResponse, uid: string, emailPa
   const db = getDb()
 
   if (req.method === 'GET' && !emailParam) {
-    // List all invites
     const snap = await db.collection('invites').orderBy('createdAt', 'desc').get()
-    const invites = snap.docs.map((d) => d.data())
-    return send(res, 200, { invites })
+    return send(res, 200, { invites: snap.docs.map((d) => d.data()) })
   }
 
   if (req.method === 'POST' && !emailParam) {
-    // Create invite
     const email = ((req.body?.email as string) ?? '').toLowerCase().trim()
     if (!email || !email.includes('@')) return send(res, 400, { error: 'invalid_email' })
 
@@ -128,13 +119,11 @@ async function handleInvites(req: Req, res: ServerResponse, uid: string, emailPa
   }
 
   if (req.method === 'PATCH' && emailParam) {
-    // Revoke invite
     const action = req.body?.action
     if (action !== 'revoke') return send(res, 400, { error: 'invalid_action' })
 
     const email = decodeURIComponent(emailParam)
-    const update = { status: 'revoked', revokedAt: new Date().toISOString() }
-    await db.collection('invites').doc(email).update(update)
+    await db.collection('invites').doc(email).update({ status: 'revoked', revokedAt: new Date().toISOString() })
     await writeAuditLog({
       eventType: 'admin_action',
       timestamp: new Date().toISOString(),
@@ -161,8 +150,7 @@ async function handleUsers(req: Req, res: ServerResponse, adminUid: string, targ
 
   if (req.method === 'GET' && !targetUid) {
     const snap = await db.collection('users').orderBy('createdAt', 'desc').limit(100).get()
-    const users = snap.docs.map((d) => ({ uid: d.id, ...d.data() }))
-    return send(res, 200, { users })
+    return send(res, 200, { users: snap.docs.map((d) => ({ uid: d.id, ...d.data() })) })
   }
 
   if (req.method === 'PATCH' && targetUid) {
@@ -244,23 +232,18 @@ async function handleSettings(req: Req, res: ServerResponse, uid: string) {
 export default async function handler(req: Req, res: ServerResponse) {
   try {
     const admin = await verifyAdmin(req)
-    const url = (req.url ?? '/api/admin').replace(/^\/api\/admin/, '') || '/'
-    const segs = url.split('/').filter(Boolean)
-    // segs: [] | ['dashboard'] | ['invites'] | ['invites', ':email'] | ['users'] | ['users', ':uid'] | ['settings']
-
-    const resource = segs[0] ?? 'dashboard'
-    const param = segs[1]
+    const q = parseQuery(req.url ?? '')
+    const resource = q.resource ?? 'dashboard'
 
     switch (resource) {
-      case 'dashboard': return handleDashboard(req, res, admin.uid)
-      case 'invites': return handleInvites(req, res, admin.uid, param)
-      case 'users': return handleUsers(req, res, admin.uid, param)
+      case 'dashboard': return handleDashboard(req, res)
+      case 'invites': return handleInvites(req, res, admin.uid, q.email)
+      case 'users': return handleUsers(req, res, admin.uid, q.uid)
       case 'settings': return handleSettings(req, res, admin.uid)
       default: return send(res, 404, { error: 'Not found' })
     }
   } catch (err) {
     const e = err as { statusCode?: number; message?: string }
-    const status = e.statusCode ?? 500
-    if (!res.headersSent) send(res, status, { error: e.message ?? 'Internal error' })
+    if (!res.headersSent) send(res, e.statusCode ?? 500, { error: e.message ?? 'Internal error' })
   }
 }

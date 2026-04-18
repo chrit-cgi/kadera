@@ -243,40 +243,40 @@ export interface DashboardResponse {
 }
 
 export function getAdminDashboard() {
-  return apiFetch<DashboardResponse>('/api/admin/dashboard')
+  return apiFetch<DashboardResponse>('/api/admin?resource=dashboard')
 }
 
 export function getAdminInvites() {
-  return apiFetch<{ invites: Invite[] }>('/api/admin/invites')
+  return apiFetch<{ invites: Invite[] }>('/api/admin?resource=invites')
 }
 
 export function postAdminInvite(email: string) {
-  return apiFetch<{ invite: Invite }>('/api/admin/invites', {
+  return apiFetch<{ invite: Invite }>('/api/admin?resource=invites', {
     method: 'POST',
     body: JSON.stringify({ email }),
   })
 }
 
 export function patchAdminInvite(email: string, action: 'revoke') {
-  return apiFetch<{ invite: Invite }>(`/api/admin/invites/${encodeURIComponent(email)}`, {
+  return apiFetch<{ invite: Invite }>(`/api/admin?resource=invites&email=${encodeURIComponent(email)}`, {
     method: 'PATCH',
     body: JSON.stringify({ action }),
   })
 }
 
 export function getAdminUsers() {
-  return apiFetch<{ users: User[] }>('/api/admin/users')
+  return apiFetch<{ users: User[] }>('/api/admin?resource=users')
 }
 
 export function patchAdminUser(uid: string, tier: User['tier']) {
-  return apiFetch<{ uid: string; tier: string }>(`/api/admin/users/${uid}`, {
+  return apiFetch<{ uid: string; tier: string }>(`/api/admin?resource=users&uid=${uid}`, {
     method: 'PATCH',
     body: JSON.stringify({ tier }),
   })
 }
 
 export function patchAdminSettings(body: { killSwitch?: boolean; spendCaps?: { dailyUSD: number; monthlyUSD: number } }) {
-  return apiFetch<{ settings: unknown }>('/api/admin/settings', {
+  return apiFetch<{ settings: unknown }>('/api/admin?resource=settings', {
     method: 'PATCH',
     body: JSON.stringify(body),
   })
