@@ -45,12 +45,10 @@ self.addEventListener('fetch', (event) => {
   // Always bypass cache for API requests and non-GET requests
   if (url.pathname.startsWith('/api/') || request.method !== 'GET') return
 
-  // For navigation requests (HTML), serve the cached shell
+  // For navigation requests serve cached shell, fall back to network
   if (request.mode === 'navigate') {
     event.respondWith(
-      fetch(request).catch(() =>
-        caches.match('/').then((cached) => cached ?? fetch(request)),
-      ),
+      caches.match('/').then((cached) => cached ?? fetch(request))
     )
     return
   }
