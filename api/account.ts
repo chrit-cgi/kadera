@@ -61,8 +61,8 @@ export default async function handler(req: Req, res: ServerResponse) {
     })
   }
 
-  // ── PATCH /api/account/prefs ───────────────────────────────────────────────
-  if (req.method === 'PATCH' && segments[0] === 'prefs') {
+  // ── PATCH /api/account ────────────────────────────────────────────────────
+  if (req.method === 'PATCH' && segments.length === 0) {
     const body = req.body ?? {}
     const coachStyle = typeof body.coachStyle === 'string' ? body.coachStyle : ''
     const validStyles = ['motivator', 'analytical', 'gentle', 'challenger']

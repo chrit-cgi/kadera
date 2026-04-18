@@ -197,7 +197,7 @@ export function getAccount() {
 }
 
 export function patchPrefs(coachStyle: CoachStyle) {
-  return apiFetch<{ coachStyle: CoachStyle }>('/api/account/prefs', {
+  return apiFetch<{ coachStyle: CoachStyle }>('/api/account', {
     method: 'PATCH',
     body: JSON.stringify({ coachStyle }),
   })
