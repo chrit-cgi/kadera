@@ -40,7 +40,6 @@ export const useAuthStore = create<AuthState>((set) => ({
       const auth = getAuth()
 
       onAuthStateChanged(auth, async (firebaseUser) => {
-        console.log('[auth] onAuthStateChanged user:', firebaseUser?.email ?? null)
         if (!firebaseUser) {
           set({ user: null, isAdmin: false, isLoading: false })
           return
@@ -49,15 +48,9 @@ export const useAuthStore = create<AuthState>((set) => ({
         // Fetch tier + admin status from the backend
         try {
           const token = await firebaseUser.getIdToken()
-          console.log('[auth] token length:', token.length)
           const res = await fetch('/api/account', {
             headers: { Authorization: `Bearer ${token}` },
           })
-          console.log('[auth] /api/account status:', res.status)
-          if (!res.ok) {
-            const body = await res.text()
-            console.error('[auth] /api/account error body:', body)
-          }
 
           if (res.ok) {
             const data = (await res.json()) as {
